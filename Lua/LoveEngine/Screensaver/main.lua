@@ -9,7 +9,7 @@ local w = math.random()
 local e = math.random()
 
 function love.load()
-    love.window.setMode(500, 650)
+    love.window.setMode(1920, 1060)
 end
 
 function love.update(dt)

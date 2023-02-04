@@ -1,53 +1,63 @@
-Key = require("lib.Keyboard")
-local GPM = require("lib.GamepadMgr")
-local SM = require("lib.SceneMgr")
-local Event = require("lib.Events")
+-- Initialize some variables
+local ball_x = 300
+local ball_y = 300
+local ball_speed_x = math.random(2, 5)
+local ball_speed_y = math.random(2, 5)
 
-local sm
-
-local gpm = GPM({"assets/gamecontrollerdb.txt"})
+local player_1_y = 250
+local player_2_y = 250
+local player_height = 50
+local player_width = 10
 
 function love.load()
-    --Love2D game settings
-    love.graphics.setDefaultFilter('nearest', 'nearest')
-    local font = love.graphics.newFont("assets/SuperMario256.ttf", 20)
-    --set the font to the one above
-    love.graphics.setFont(font)
-
-    _G.events = Event(false)
-
-    Key:hook_love_events()
-
-    gpm.event:hook('controller_added', on_controller_added)
-    gpm.event:hook('controller_removed', on_controller_removed)
-    
-    sm = SM("scenes", {"MainMenu", "Test"})
-    sm:switch("MainMenu")
-    -- sm:switch("Test")
-end
-
-function on_controller_added(joyId)
-    print("controller " .. joyId .. "added")
-end
-
-function on_controller_removed(joyId)
-    print("controller " .. joyId .. "removed")
+  -- Set up the window
+  love.window.setMode(600, 600)
 end
 
 function love.update(dt)
-    if dt > 0.035 then return end
-    
-    if Key:key_down(",") then
-        sm:switch("MainMenu")
-    elseif Key:key_down(".") then
-        sm:switch("Test")
-    end
+  -- Move the ball
+  ball_x = ball_x + ball_speed_x
+  ball_y = ball_y + ball_speed_y
 
-    sm:update(dt)
-    Key:update(dt)
-    gpm:update(dt)
+  -- Bounce the ball if it hits the top or bottom of the window
+  if ball_y <= 0 or ball_y >= love.graphics.getHeight() then
+    ball_speed_y = -ball_speed_y
+  end
+
+  -- Check for collisions with the players
+  if ball_x <= player_width and
+    ball_y >= player_1_y and
+    ball_y <= player_1_y + player_height then
+    ball_speed_x = -ball_speed_x
+  end
+  if ball_x >= love.graphics.getWidth() - player_width and
+    ball_y >= player_2_y and
+    ball_y <= player_2_y + player_height then
+    ball_speed_x = -ball_speed_x
+  end
+
+  -- Move player 1 with the up and down arrow keys
+  if love.keyboard.isDown("up") then
+    player_1_y = player_1_y - 5
+  end
+  if love.keyboard.isDown("down") then
+    player_1_y = player_1_y + 5
+  end
+
+  -- Move player 2 with the w and s keys
+  if love.keyboard.isDown("w") then
+    player_2_y = player_2_y - 5
+  end
+  if love.keyboard.isDown("s") then
+    player_2_y = player_2_y + 5
+  end
 end
 
 function love.draw()
-    sm:draw()
+  -- Draw the ball
+  love.graphics.rectangle("fill", ball_x, ball_y, 10, 10)
+
+  -- Draw the players
+  love.graphics.rectangle("fill", 0, player_1_y, player_width, player_height)
+  love.graphics.rectangle("fill", love.graphics.getWidth() - player_width, player_2_y, player_width, player_height)
 end

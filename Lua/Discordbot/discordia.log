@@ -1,0 +1,8 @@
+2023-02-05 01:02:02 | [INFO]    | Discordia 2.11.2
+2023-02-05 01:02:02 | [INFO]    | Connecting to Discord...
+2023-02-05 01:02:02 | [INFO]    | Authenticated as 나레이션#2823
+2023-02-05 01:02:03 | [INFO]    | Launching shard 0 (1 out of 1)...
+2023-02-05 01:02:03 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2023-02-05 01:02:03 | [INFO]    | Shard 0 : Received HELLO
+2023-02-05 01:02:04 | [INFO]    | Shard 0 : Received READY
+2023-02-05 01:02:04 | [WARNING] | C:\Users\makpu\Downloads\Projects\Lua\Discordbot\main.lua:8: Client.setGame is deprecated; use Client.setActivity instead

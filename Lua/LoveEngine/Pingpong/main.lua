@@ -42,7 +42,17 @@ function love.update(dt)
 			p.x = p.x - (p.speed * dt)
 		end
     end
+    if love.keyboard.isDown('left') then
+		if p.x > 0 then 
+			p.x = p.x - (p.speed * dt)
+		end
+    end
     if love.keyboard.isDown('d') then
+		if p.x < (love.graphics.getWidth() - 130) then
+			p.x = p.x + (p.speed * dt)
+        end
+	end
+    if love.keyboard.isDown('right') then
 		if p.x < (love.graphics.getWidth() - 130) then
 			p.x = p.x + (p.speed * dt)
         end

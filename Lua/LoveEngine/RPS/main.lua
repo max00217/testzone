@@ -94,7 +94,7 @@ function love.update(dt)
         love.graphics.print("Total Draws : "..drawcount, 0, 50, 0, 2)
         love.graphics.print("Rock : Z", 5, 570, 0, 2)
         love.graphics.print("Paper : X", 130, 570, 0, 2)
-        love.graphics.print("Scissors : Y", 260, 570, 0, 2)
+        love.graphics.print("Scissors : C", 260, 570, 0, 2)
 
     end
 end

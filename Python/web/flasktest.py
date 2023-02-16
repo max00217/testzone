@@ -7,8 +7,8 @@ app = Flask(__name__)
 @app.route('/home')
 def home():
     return '''
-    <h1>HTML 제목</h1>
-    <p>HTML 본문 </p>
+    <h1>A.C.T.</h1>
+    <p>웹 개발 인력 없음</p>
     <a href="https://discord.gg/HGTYEzfMGY">Stack OryangFlow</a>
     '''
 
@@ -17,4 +17,4 @@ def user(user_name, user_id):
     return f'Hello, {user_name}({user_id})!'
 
 if __name__ == '__main__':
-    app.run(host = "0.0.0.0")
+    app.run(host = "0.0.0.0", port=5000)

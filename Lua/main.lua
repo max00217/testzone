@@ -1,139 +1,139 @@
-local objects = {blocks = {}}
-local world = love.physics.newWorld(0, 9.81*64, true)
-local mx, my = 0, 0
-
-function BeginContact(a, b, coll)
-	if a:getUserData() == "mouse"  then
-		b:setUserData("move")
-	elseif b:getUserData() == "mouse" then
-		a:setUserData("move")
-	end
-end
-
-function EndContact(a, b, coll)
-	if a:getUserData() == "mouse"  then
-		b:setUserData(nil)
-	elseif b:getUserData() == "mouse" then
-		a:setUserData(nil)
-	end
-end
-
-function PreSolve(a, b, coll)
-end
-
-function PostSolve(a, b, coll, normalimpulse, tangentimpulse)
-end
-
-world:setCallbacks(BeginContact, EndContact, PreSolve, PostSolve)
-
-
-
 function love.load()
-	love.physics.setMeter(70)
-
-	objects.ground = {}
-	objects.ground.body = love.physics.newBody(world, 700/2, 660)
-	objects.ground.shape = love.physics.newRectangleShape(650, 50)
-	objects.ground.fixture = love.physics.newFixture(objects.ground.body,objects.ground.shape)
-
-	objects.lwall = {}
-	objects.lwall.body = love.physics.newBody(world, 0, 350)
-	objects.lwall.shape = love.physics.newRectangleShape(50, 6500)
-	objects.lwall.fixture = love.physics.newFixture(objects.lwall.body,objects.lwall.shape)
-
-	objects.rwall = {}
-	objects.rwall.body = love.physics.newBody(world, 700, 350)
-	objects.rwall.shape = love.physics.newRectangleShape(50, 6500)
-	objects.rwall.fixture = love.physics.newFixture(objects.rwall.body,objects.rwall.shape)
-
-	local block1 = {}
-	block1.body = love.physics.newBody(world, 200, 300, "dynamic")
-	block1.shape = love.physics.newRectangleShape(0, 0, 162.5,32.5)
-	block1.fixture = love.physics.newFixture(block1.body, block1.shape, 5)
-	
-	local block2 = {}
-	block2.body = love.physics.newBody(world, 200, 300, "dynamic")
-	block2.shape = love.physics.newRectangleShape(0, 0, 162.5,32.5)
-	block2.fixture = love.physics.newFixture(block2.body, block2.shape, 5)
-
-	local block3 = {}
-	block3.body = love.physics.newBody(world, 200, 300, "dynamic")
-	block3.shape = love.physics.newRectangleShape(0, 0, 162.5,32.5)
-	block3.fixture = love.physics.newFixture(block3.body, block3.shape, 5)
-	
-	local block4 = {}
-	block4.body = love.physics.newBody(world, 200, 300, "dynamic")
-	block4.shape = love.physics.newRectangleShape(0, 0, 162.5,32.5)
-	block4.fixture = love.physics.newFixture(block4.body, block4.shape, 5)
-
-	local block5 = {}
-	block5.body = love.physics.newBody(world, 200, 300, "dynamic")
-	block5.shape = love.physics.newRectangleShape(0, 0, 162.5,32.5)
-	block5.fixture = love.physics.newFixture(block5.body, block5.shape, 5)
-	
-	local block6 = {}
-	block6.body = love.physics.newBody(world, 200, 300, "dynamic")
-	block6.shape = love.physics.newRectangleShape(0, 0, 162.5,32.5)
-	block6.fixture = love.physics.newFixture(block6.body, block6.shape, 5)
-
-	local block7 = {}
-	block7.body = love.physics.newBody(world, 200, 300, "dynamic")
-	block7.shape = love.physics.newRectangleShape(0, 0, 162.5,32.5)
-	block7.fixture = love.physics.newFixture(block7.body, block7.shape, 5)
-	
-	objects.blocks = {
-		block1,
-		block2,
-		block3,
-		block4,
-		block5,
-		block6,
-		block7
+	-- Set up the game variables
+	ball = { x = 320, y = 240, dx = 200, dy = 200, radius = 10 }
+	paddles = {
+	  { x = 20, y = 200, dy = 0, width = 10, height = 80 }, -- player 1
+	  { x = 610, y = 200, dy = 0, width = 10, height = 80 }, -- player 2
+	  { x = 320, y = 20, dy = 0, width = 80, height = 10 }, -- player 3
+	  { x = 320, y = 450, dy = 0, width = 80, height = 10 }, -- player 4
 	}
-
-	objects.mousePointer = {}
-	objects.mousePointer.body = love.physics.newBody(world, mx, my, "dynamic")
-	objects.mousePointer.shape = love.physics.newRectangleShape(0, 0, 5, 5)
-	objects.mousePointer.fixture = love.physics.newFixture(objects.mousePointer.body, objects.mousePointer.shape, 5)
-	objects.mousePointer.fixture:setUserData("mouse")
-	objects.mousePointer.fixture:setSensor(true)
-
-	love.graphics.setBackgroundColor(0, 0, 0)
-	love.window.setMode(700, 650)
+	scores = { 0, 0, 0, 0 }
+  end
+  
+  function love.update(dt)
+	-- Update the ball position
+	ball.x = ball.x + ball.dx * dt
+	ball.y = ball.y + ball.dy * dt
+  
+	-- Check for ball collision with the walls and paddles
+	if ball.y < ball.radius or ball.y > love.graphics.getHeight() - ball.radius then
+	  ball.dy = -ball.dy
+	end
+	for i, paddle in ipairs(paddles) do
+	  if checkCollision(ball.x, ball.y, ball.radius, paddle.x, paddle.y, paddle.width, paddle.height) then
+		ball.dx = -ball.dx
+		ball.dy = ball.dy + paddle.dy / 2
+	  end
+	end
+  
+	-- Update the paddle positions
+	for i, paddle in ipairs(paddles) do
+	  paddle.y = paddle.y + paddle.dy * dt
+	  if paddle.y < 0 then
+		paddle.y = 0
+	  elseif paddle.y + paddle.height > love.graphics.getHeight() then
+		paddle.y = love.graphics.getHeight() - paddle.height
+	  end
+	end
+  
+	-- Check for paddle collision with the walls
+	for i, paddle in ipairs(paddles) do
+	  if paddle.y < 0 then
+		paddle.y = 0
+	  elseif paddle.y + paddle.height > love.graphics.getHeight() then
+		paddle.y = love.graphics.getHeight() - paddle.height
+	  end
+	end
+  
+	-- Check for ball going out of bounds
+	if ball.x < -ball.radius then
+	  scores[2] = scores[2] + 1
+	  reset()
+	elseif ball.x > love.graphics.getWidth() + ball.radius then
+	  scores[1] = scores[1] + 1
+	  reset()
+	end
+  end
+  
+  function love.draw()
+	-- Draw the ball and paddles
+	love.graphics.circle("fill", ball.x, ball.y, ball.radius)
+	for i, paddle in ipairs(paddles) do
+	  love.graphics.rectangle("fill", paddle.x, paddle.y, paddle.width, paddle.height)
+	end
+  
+	-- Draw the scores
+	love.graphics.printf("Player 1: " .. scores[1], 0, 10, 150, "center")
+	love.graphics.printf("Player 2: " .. scores[2], love.graphics.getWidth() - 150, 10, 150, "center")
+	love.graphics.printf("Player 3: " .. scores[3], 0, love.graphics.getHeight() - 30, 150, "center")
+	love.graphics.printf("Player 4: " .. scores[4], love.graphics)
 end
-
-function love.update(dt)
-	world:update(dt)
-	mx, my = love.mouse.getPosition()
-	objects.mousePointer.body:setPosition(mx, my)
-
-	for _, o in ipairs(objects.blocks) do
-		if love.mouse.isDown(1) then
-			if o.fixture:getUserData() == "move" then
-				o.body:setPosition(mx, my)
-			end
+  function love.keypressed(key)
+		-- Player 1 controls
+	if key == "w" then
+		paddles[1].dy = -200
+	elseif key == "s" then
+		paddles[1].dy = 200
+	end
+		
+		-- Player 2 controls
+	if key == "up" then
+		paddles[2].dy = -200
+	elseif key == "down" then
+		paddles[2].dy = 200
+	end
+		
+		-- Player 3 controls
+	if key == "a" then
+		paddles[3].dy = -200
+	elseif key == "d" then
+		paddles[3].dy = 200
+	end
+		
+		-- Player 4 controls
+	if key == "left" then
+		paddles[4].dy = -200
+	elseif key == "right" then
+		paddles[4].dy = 200
 		end
-	end
-end
-
-function love.mousereleased(x, y, button, istouch, presses)
-	for _, o in ipairs(objects.blocks) do
-		o.fixture:setUserData(nil)
-		o.body:applyForce(0,1)
-	end
-end
-
-function love.draw()
-	love.graphics.setColor(0, 0, 0)
-	love.graphics.polygon("fill", objects.ground.body:getWorldPoints(objects.ground.shape:getPoints()))
-	love.graphics.polygon("fill", objects.lwall.body:getWorldPoints(objects.lwall.shape:getPoints()))
-	love.graphics.polygon("fill", objects.rwall.body:getWorldPoints(objects.rwall.shape:getPoints()))
-
-	love.graphics.setColor(0.95, 0.5, 0.1)
-
-	for _, o in ipairs(objects.blocks) do
-		love.graphics.polygon("fill", o.body:getWorldPoints(o.shape:getPoints()))
-	end
-
-	love.graphics.polygon("fill", objects.mousePointer.body:getWorldPoints(objects.mousePointer.shape:getPoints()))
-end
+	end	
+	function love.keyreleased(key)
+		-- Player 1 controls
+		if key == "w" or key == "s" then
+		paddles[1].dy = 0
+		end
+		
+		-- Player 2 controls
+		if key == "up" or key == "down" then
+		paddles[2].dy = 0
+		end
+		
+		-- Player 3 controls
+		if key == "a" or key == "d" then
+		paddles[3].dy = 0
+		end
+		
+		-- Player 4 controls
+		if key == "left" or key == "right" then
+		paddles[4].dy = 0
+		end
+		end
+		
+	function reset()
+		-- Reset the ball and paddle positions
+		ball.x = love.graphics.getWidth() / 2
+		ball.y = love.graphics.getHeight() / 2
+		ball.dx = 200
+		ball.dy = 200
+		for i, paddle in ipairs(paddles) do
+		paddle.y = love.graphics.getHeight() / 2 - paddle.height / 2
+		paddle.dy = 0
+		end
+		end
+		
+	function checkCollision(x1, y1, r1, x2, y2, w2, h2)
+		-- Check for collision between a circle and a rectangle
+		local dx = x1 - math.max(x2, math.min(x1, x2 + w2))
+		local dy = y1 - math.max(y2, math.min(y1, y2 + h2))
+		return (dx * dx + dy * dy) < (r1 * r1)
+		end

@@ -108,6 +108,6 @@ function love.draw()
 	cam:attach()
 		love.graphics.draw(player.img, player.x, player.y, 0, 0.25, 0.25, 0, 32)
 	cam:detach()	
-	love.graphics.draw(gamepad.img, gamepad.x, gamepad.y, 0, 0.25, 0.25, 0, 32)
+		love.graphics.draw(gamepad.img, gamepad.x, gamepad.y, 0, 0.25, 0.25, 0, 32)
 
 end

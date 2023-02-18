@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <title>글 목록</title>
+  </head>
+  <body>
+    <h1>글 목록</h1>
+    <ul>
+      {% for entry in DB테이블이름 %}
+      <li><a href="/{{ entry.id }}">{{ entry.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <p><a href="/add">새 글 작성</a></p>
+  </body>
+</html>

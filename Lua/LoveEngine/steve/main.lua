@@ -56,10 +56,10 @@ function love.load()
     steve = "Steve"
 
     move = 200
-
-    
 end
+
 highscore = 0
+
 function overreset()
     over = ""
     steve = "Steve"
@@ -70,10 +70,19 @@ function overreset()
     move = 200
 end
 
+function greset()
+    over = "Game Over"
+    cooldown = 0
+    steve = "DED"
+    move = 0
+    acc = 0
+    bacc = 0
+end
 
 function reset()
     cactus.spawn_interval = love.math.random(1,2)*love.math.random(1,10)*cooldown*1.2
 end
+
 function resetbird()
     bird.spawn_interval = love.math.random(1,2)*love.math.random(1,10)*cooldown*2
 end
@@ -93,7 +102,6 @@ function love.update(dt)
         player.y = 265
     end
 
-
     if over == "" then
 	    if love.keyboard.isDown('space') or love.keyboard.isDown('up') or love.keyboard.isDown('w') then
 		    if player.y_velocity == 0 then
@@ -101,7 +109,6 @@ function love.update(dt)
                 love.audio.play(jump)
 		    end
 	    end
-
         if love.keyboard.isDown('down') or love.keyboard.isDown('s') then
             player.radian = 0
             player.x = 50
@@ -135,10 +142,12 @@ function love.update(dt)
         reset()
     end
     bird.spawn_timer = bird.spawn_timer + dt
-    if bird.spawn_timer > bird.spawn_interval then
-        bird.spawn_timer = 0
-        table.insert(bird, {x = 710, y = love.math.random(240, 220)})
-        resetbird()
+    if tonumber(string.format("%.1f", numon)) > 20 then
+        if bird.spawn_timer > bird.spawn_interval then
+            bird.spawn_timer = 0
+            table.insert(bird, {x = 710, y = love.math.random(240, 200)})
+            resetbird()
+        end
     end
 
     if tonumber(string.format("%.1f", numon)) % 10 == 0 then
@@ -164,11 +173,7 @@ function love.update(dt)
             end
         end
         if CheckCollisioncactus(player, cactus) then
-            over = "Game Over"
-            cooldown = 0
-            steve = "DED"
-            move = 0
-            acc = 0
+            greset()
             StartTimer = StartTimer - dt
             timer = string.format("%.3f", StartTimer - dt)
         end
@@ -187,13 +192,14 @@ function love.update(dt)
             end
         end   
     end
+
     for i, bird in ipairs(bird) do
         bird.x = bird.x - move * dt - bacc
         if bird.x < 0 then
             table.remove(bird, i)
         end 
         function CheckCollisionbird(a, b)
-            if b.y > a.y - 45 and b.y < a.y - 30 and
+            if b.y > a.y - 60 and b.y < a.y - 30 and
             a.x + 15 > b.x and a.x < b.x + 35 then
                 return true
             else
@@ -201,14 +207,25 @@ function love.update(dt)
             end
         end 
         if CheckCollisionbird(player, bird) then
-            over = "Game Over"
-            cooldown = 0
-            steve = "DED"
-            move = 0
-            acc = 0
+            greset()
             StartTimer = StartTimer - dt
             timer = string.format("%.3f", StartTimer - dt)
         end
+        if steve == "DED" then
+            suit.layout:reset(love.graphics.getWidth() / 2 - 37.5, love.graphics.getHeight() / 2 - 15)
+            button = suit.Button("Restart", suit.layout:row(75, 50))
+            if button.hit then
+                table.remove(cactus, i)
+                love.load()
+                cactus.y = 1999
+                cactus.x = 700
+                numon = 0
+            end
+            if highscore < StartTimer then
+                highscore = StartTimer
+            end
+        end   
+
     end  
 end
 

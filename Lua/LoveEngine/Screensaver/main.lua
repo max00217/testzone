@@ -1,12 +1,12 @@
 x, y, r = 200, 200, 30
 vx, vy = 10.0, 10.0
-gravity = 9.8
-speed_scale = 60
+gravity = 0
+speed_scale = 50
 jump_speed = -15
 
-local q = math.random()
-local w = math.random()
-local e = math.random()
+local q = love.math.random()
+local w = love.math.random()
+local e = love.math.random()
 
 function love.load()
     love.window.setMode(1920, 1060)

@@ -34,9 +34,7 @@ function love.update(dt)
         vy = -jump_speed / 2
         love.audio.play(bounce)
     end
-
-
-
+    
     if love.keyboard.isDown('a') then
 		if p.x > 0 then 
 			p.x = p.x - (p.speed * dt)

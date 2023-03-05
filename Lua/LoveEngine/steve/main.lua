@@ -199,7 +199,7 @@ function love.update(dt)
             table.remove(bird, i)
         end 
         function CheckCollisionbird(a, b)
-            if b.y > a.y - 60 and b.y < a.y - 30 and
+            if b.y > a.y - 60 and b.y < a.y - 35 and
             a.x + 15 > b.x and a.x < b.x + 35 then
                 return true
             else

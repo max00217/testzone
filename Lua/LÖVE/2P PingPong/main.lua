@@ -1,4 +1,3 @@
--- Set up the game window
 function love.load()
     bounce = love.audio.newSource("bounce.mp3", "static")
     score = love.audio.newSource("score.mp3", "static")
@@ -9,7 +8,7 @@ function love.load()
     ball.dx, ball.dy = 0, 0
     r, g, b, a = 1, 1, 1, 0.1
 end
-  -- Set up the game variables 
+ 
 function reset()
     ball = { x = 320, y = 240, dx = math.random(-350, 350), dy = math.random(-350, 350) }
     paddle1 = { x = 20, y = 200, dy = 0, width = 10, height = 80 }
@@ -24,7 +23,7 @@ score2 = 0
 
 reset()
 
-  -- Update the game
+
 function love.update(dt)
     if ball.dy ~= 0 then
         if ball.dx < 200 and ball.dx > -200 then
@@ -33,25 +32,21 @@ function love.update(dt)
             reset()
         end
     end
-    -- Move the paddles
+
     paddle1.y = paddle1.y + paddle1.dy * dt
     paddle2.y = paddle2.y + paddle2.dy * dt
-  
-    -- Keep the paddles on the screen
+
     paddle1.y = math.max(0, math.min(paddle1.y, love.graphics.getHeight() - paddle1.height))
     paddle2.y = math.max(0, math.min(paddle2.y, love.graphics.getHeight() - paddle2.height))
-  
-    -- Move the ball
+
     ball.x = ball.x + ball.dx * dt
     ball.y = ball.y + ball.dy * dt
-  
-    -- Bounce the ball off the walls
+
     if ball.y < 0 or ball.y > love.graphics.getHeight() then
         ball.dy = -ball.dy
         love.audio.play(bounce)
     end
-  
-    -- Score if the ball goes past a paddle
+
     if ball.x < 0 then
         score2 = score2 + 1
         love.audio.play(score)
@@ -61,8 +56,7 @@ function love.update(dt)
         love.audio.play(score)
         reset()
     end
-  
-    -- Bounce the ball off the paddles
+
     if ball.x < paddle1.x + paddle1.width and
         ball.y > paddle1.y and
         ball.y < paddle1.y + paddle1.height then
@@ -117,29 +111,25 @@ function love.update(dt)
         end
     end
 end
-  
-  -- Draw the game
+
 function love.draw()
     love.graphics.setColor(1, 1, 1, 1)
     love.graphics.print(p1wins, 242, 260, 0, 2)
     love.graphics.print(p2wins, 242, 260, 0, 2)
     love.graphics.print(startmessege, 152, 260, 0, 2)
-    -- Draw the ball
+
     love.graphics.setColor(r, g, b, a)
     love.graphics.circle("fill", ball.x, ball.y, 10)
-  
-    -- Draw the paddles
+
     love.graphics.setColor(r, g, b, a)
     love.graphics.rectangle("fill", paddle1.x, paddle1.y, paddle1.width, paddle1.height)
     love.graphics.rectangle("fill", paddle2.x, paddle2.y, paddle2.width, paddle2.height)
-  
-    -- Draw the scores
+
     love.graphics.setColor(1, 1, 1, 1)
     love.graphics.print(score1, 280, 10)
     love.graphics.print(score2, 340, 10)
 end
-  
-  -- Handle the keyboard input
+
 function love.keypressed(key)
     if key == "w" then
         paddle1.dy = -450
@@ -161,5 +151,3 @@ function love.keyreleased(key)
         paddle2.dy = 0
         end
 end
-        
-  

@@ -1,6 +1,6 @@
 fun main(){
     val a = 5
-    var b = 3
+    var b = 8
     println("a + b == a.plus(b) ==> ${a + b} == ${a.plus(b)}")
     println("a - b == a.minus(b) ==> ${a - b} == ${a.minus(b)}")
     println("a * b == a.times(b) ==> ${a * b} == ${a.times(b)}")

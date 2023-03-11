@@ -1,15 +1,16 @@
 -- define the grid size
-local gridWidth, gridHeight = 50, 50
+local gridWidth, gridHeight = 200, 200
 
 -- define the cell size
-local cellSize = 10
+local cellSize = 4.5
+love.window.setMode(900, 900)
 
 -- create the initial grid
 local grid = {}
 for i = 1, gridHeight do
   grid[i] = {}
   for j = 1, gridWidth do
-    grid[i][j] = math.random(0, 1)
+    grid[i][j] = love.math.random(0, 1)
   end
 end
 

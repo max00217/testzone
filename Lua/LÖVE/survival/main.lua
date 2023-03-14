@@ -33,7 +33,7 @@ function love.load()
         x = 0,
         y = 0,
         radius = 5,
-        speed = 500,
+        speed = 1000,
         active = false -- bullet is inactive until fired
       }
 

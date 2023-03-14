@@ -1,4 +1,4 @@
-local suit = require 'suit'
+local suit = require("suit")
 
 function love.load()
     love.window.setMode(400, 600)

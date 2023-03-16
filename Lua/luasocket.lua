@@ -1,4 +1,4 @@
-package.path = package.path..";C:\\Users\\makpu\\Downloads\\proj\\project\\Lua\\modules\\luasocket\\src\\?.lua"
+package.path = package.path..";C:\\Users\\makpu\\Downloads\\proj\\project\\Lua\\modules\\socket\\?.lua"
 
 local socket = require("socket")
 

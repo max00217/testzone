@@ -1,15 +1,11 @@
-package.preload["lapis"] = function()
-  lapis = require("lapis")
-  app = lapis.Application()
+package.path = package.path..";C:\\Users\\makpu\\Downloads\\proj\\project\\Lua\\modules\\sailor\\src\\?.lua"
 
-  -- "/" 경로 핸들러
-app:get("/", function(self)
-  return "Hello, World!"
+local sailor = require "sailor"
+
+-- Define the route for the homepage
+sailor.route:match("/", function()
+    return "Hello, world!"
 end)
 
--- 앱 실행
-app:run()
-
-  return lapis
-end
-
+-- Start the server
+sailor.start()

@@ -1,20 +1,30 @@
 package.path = package.path..";C:\\Users\\makpu\\Downloads\\proj\\project\\Lua\\modules\\socket\\?.lua"
+package.cpath = package.cpath..";C:\\Users\\makpu\\Downloads\\proj\\project\\Lua\\modules\\socket\\?.dll"
 
 local socket = require("socket")
 
--- Connect to the server
-local client = socket.connect("localhost", 8080)
+-- Create a TCP/IP client socket
+local client = socket.tcp()
 
--- Send a message to the server
-client:send("Hello, server!\n")
+-- Connect to the server (in this case, the website)
+client:connect("example.com", 80)
 
--- Receive a response from the server
-local response, err = client:receive()
-if err then
-  print("Error: " .. err)
-else
-  print(response)
+-- Send an HTTP request to the server
+local request = "GET / HTTP/1.1\r\nHost: example.com\r\nConnection: close\r\n\r\n"
+client:send(request)
+
+-- Read the server's response
+local response = ""
+while true do
+  local data, err, partial = client:receive("*a")
+  if not data then
+    response = response .. partial
+    break
+  else
+    response = response .. data
+  end
 end
 
--- Close the connection
-client:close()
+-- Print the server's response, which includes the webpage content
+print(response)
+print("asjdfkslkdfj")

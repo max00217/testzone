@@ -1,0 +1,12 @@
+io.write()
+A = tonumber(io.read())
+io.write()
+B = tonumber(io.read())
+io.write()
+C = tonumber(io.read())
+
+print(A, B, C)
+print((A+B)%C)
+print(((A%C)+(B%C)%C))
+print((A*B)%C)
+print(((A%C)*(B%C))%C)

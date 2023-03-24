@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="luasocket-master">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/openAI/luasocket-master.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Lua/modules/luaplot" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Lua/modules/luastats" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Lua/modules/sailor" vcs="Git" />
   </component>
 </project>

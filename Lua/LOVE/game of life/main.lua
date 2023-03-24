@@ -55,7 +55,7 @@ function drawGrid()
   for i = 1, gridHeight do
     for j = 1, gridWidth do
       if grid[i][j] == 1 then
-        love.graphics.setColor(1, 1, 1)
+        love.graphics.setColor(0.2, 0.7, 0.7)
       else
         love.graphics.setColor(0, 0, 0)
       end

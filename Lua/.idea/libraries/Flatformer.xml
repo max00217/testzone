@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Flatformer">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LOVE/Flatformer/Flatformer.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

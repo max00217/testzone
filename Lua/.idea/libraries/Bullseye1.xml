@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Bullseye1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Bullseye/Bullseye.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

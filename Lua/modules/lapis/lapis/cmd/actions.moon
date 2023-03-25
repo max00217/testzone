@@ -387,14 +387,26 @@ COMMANDS = {
         \argument("sub_command_args", "Arguments to command")\argname("<args>")\args("*")
 
     (args) =>
+      switch args.sub_command
+        when "--help", "-h"
+          return @execute {"help", "_"}
+
       action = require "lapis.cmd.actions.#{args.sub_command}"
 
-      -- this runs commands legacy style, from before argparse
-      import parse_flags from require "lapis.cmd.util"
-      flags, rest = parse_flags args.sub_command_args
-      flags.environment or= args.environment
+      command_args = if action.argparser
+        parse_args = action.argparser!
+        -- pass two args objects, firt the sub command args, then the lapis
+        -- command's parsed arguments (for getting global flags like
+        -- --environment)
+        { parse_args\parse(args.sub_command_args), args }
+      else
+        -- this runs commands legacy style, from before argparse support was added
+        import parse_flags from require "lapis.cmd.util"
+        flags, rest = parse_flags args.sub_command_args
+        flags.environment or= args.environment
+        { flags, unpack rest}
 
-      action[1] @, flags, unpack rest
+      action[1] @, unpack command_args
   }
 
   -- NOTE: to simplify migration to argparse we are currently including the arg
@@ -426,13 +438,14 @@ COMMANDS = {
 
     argparse: (command) ->
       with command
-        \argument("files", "Paths to model classes to annotate (eg. models/first.moon models/second.moon ...)")\args "+"
-        \option("--preload-module", "Module to require before annotating a model")\argname "<name>"
+        \handle_options false
+        \argument("sub_command_args", "Arguments to command")\argname("<args>")\args("*")
 
     (args) =>
       action = require "lapis.cmd.actions.annotate"
-      args["preload-module"] = args.preload_module
-      action[1] @, args, unpack args.files
+      assert action.argparser, "Your lapis-annotate module is too out of date for this version of Lapis, please update it"
+      parse_args = action.argparser!
+      action[1] @, parse_args\parse(args.sub_command_args), args
   }
 
   {

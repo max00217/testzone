@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<p>대표자 한 명만 구분해주세요.</p>
+
+<label for="options">특별실 대여:</label>
+<select id="options" name="options" onchange="showCheckboxes()">
+  <option value="멀티실">멀티실</option>
+  <option value="자기주도학습실">자기주도학습실</option>
+  <option value="컴퓨터실">컴퓨터실</option>
+  <option value="열린 도서관">열린 도서관</option>
+  <option value="대형 수업실">대형 수업실</option>
+</select>
+
+<div id="checkboxes">
+  <label for="1실">1실</label>
+  <input type="checkbox" id="1실" name="1실"><br>
+  <label for="2실<">2실</label>
+  <input type="checkbox" id="2실" name="2실<"><br>
+  <label for="3실">3실</label>
+  <input type="checkbox" id="3실" name="3실"><br>
+  <label for="4실">4실</label>
+  <input type="checkbox" id="4실4" name="4실"><br>
+  <label for="5실">5실</label>
+  <input type="checkbox" id="5실" name="5실"><br>
+  <label for="6실">6실</label>
+  <input type="checkbox" id="6실" name="6실"><br>
+</div>
+
+<label for="grade">구분:</label>
+<select id="grade" name="grade" onchange="showOptions(), club()">
+  <option value="1">1학년</option>
+  <option value="2">2학년</option>
+  <option value="3">3학년</option>
+  <option value="교사">교사</option>
+  <option value="동아리">동아리</option>
+</select>
+
+<div id="classNumberOptions" style="display: none;">
+  <label for="class">반:</label>
+  <select id="class" name="class">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  </select>
+
+  <label for="Number">번호:</label>
+  <select id="Number" name="Number">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>
+  <option value="25">25</option>
+  <option value="26">26</option>
+  <option value="27">27</option>
+  <option value="28">28</option>
+  <option value="29">29</option>
+  <option value="30">30</option>
+  <option value="31">31</option>
+  <option value="32">32</option>
+  <option value="33">33</option>
+  <option value="34">34</option>
+  <option value="35">35</option>
+  <option value="36">36</option>
+  <option value="37">37</option>
+  <option value="38">38</option>
+  <option value="39">39</option>
+  <option value="40">40</option>
+  </select>
+  
+  <label for="NoP">인원 수:</label>
+  <select id="NoP" name="NoP">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16+">16+</option>
+  </select>
+  
+</div>
+<div id="club" style="display: none;">
+  <label for="clubname">동아리명:</label>
+  <select id="clubname" name="clubname", onchange="autonomousclub()">
+    <option value="자율동아리">자율동아리</option>
+    <option value="A.C.T.">A.C.T.</option>
+    <option value="A.M.E.N.">A.M.E.N.</option>
+    <option value="Art aNd Design">Art aNd Design</option>
+    <option value="C.B.R.">C.B.R.</option>
+    <option value="Capsule">Capsule</option>
+    <option value="CLOUD">CLOUD</option>
+    <option value="Creator">Creator</option>
+    <option value="DCN(방송반)">DCN(방송반)</option>
+    <option value="DEM(Daeshin English Masters)">DEM(Daeshin English Masters)</option>
+    <option value="DOYL-政源">DOYL-政源</option>
+    <option value="Finder">Finder</option>
+    <option value="Fusing Science">Fusing Science</option>
+    <option value="GOODWILL">GOODWILL</option>
+    <option value="H&amp;L">H&amp;L</option>
+    <option value="Leadiant">Leadiant</option>
+    <option value="Life Science">Life Science</option>
+    <option value="Medical Q">Medical Q</option>
+    <option value="Mutation">Mutation</option>
+    <option value="ODA">ODA</option>
+    <option value="OnePress">OnePress</option>
+    <option value="Path Finder">Path Finder</option>
+    <option value="PRIME">PRIME</option>
+    <option value="RCY">RCY</option>
+    <option value="SCIVILL">SCIVILL</option>
+    <option value="SEUM">SEUM</option>
+    <option value="shooting">shooting</option>
+    <option value="SSAM">SSAM</option>
+    <option value="STEMINUS">STEMINUS</option>
+    <option value="The Mining">The Mining</option>
+    <option value="The Wheels">The Wheels</option>
+    <option value="TradeMark">TradeMark</option>
+    <option value="골든크로스">골든크로스</option>
+    <option value="공간디자인">공간디자인</option>
+    <option value="교집합">교집합</option>
+    <option value="그린레인저">그린레인저</option>
+    <option value="그린머니">그린머니</option>
+    <option value="날샘">날샘</option>
+    <option value="뉴스포츠">뉴스포츠</option>
+    <option value="다온">다온</option>
+    <option value="독서토론논술부">독서토론논술부</option>
+    <option value="또래상담">또래상담</option>
+    <option value="라이프니츠">라이프니츠</option>
+    <option value="문화진로탐방">문화진로탐방</option>
+    <option value="법愛정신">법愛정신</option>
+    <option value="별사탕(천문우주관측)">별사탕(천문우주관측)</option>
+    <option value="사람의 시(詩)">사람의 시(詩)</option>
+    <option value="생존의 달인">생존의 달인</option>
+    <option value="세계시민 협동학교">세계시민 협동학교</option>
+    <option value="아키트리">아키트리</option>
+    <option value="아티펙스">아티펙스</option>
+    <option value="여름밤">여름밤</option>
+    <option value="영미문학 읽고 생각하기">영미문학 읽고 생각하기</option>
+    <option value="전공실기대비반">전공실기대비반</option>
+    <option value="지오아크">지오아크</option>
+    <option value="플랙스(Flags)">플랙스(Flags)</option>
+    <option value="한 땀">한 땀</option>
+  </select>
+
+  <label for="Aclubname" id="AclubnameLabel" style="display: none;">자율동아리명:</label>
+    <input type="text" id="Aclubname" name="Aclubname" style="display: none;">
+    
+  <label for="CNoP">인원 수:</label>
+  <select id="CNoP" name="CNoP">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16+">16+</option>
+  </select>
+</div>
+
+<script>
+  function showOptions() {
+    var grade = document.getElementById("grade").value;
+    var classNumberOptions = document.getElementById("classNumberOptions");
+
+    if (grade == "1" || grade == "2" || grade == "3") {
+      classNumberOptions.style.display = "block";
+    } else {
+      classNumberOptions.style.display = "none";
+    }
+  }
+  function club() {
+    var grade = document.getElementById("grade").value;
+    var club = document.getElementById("club");
+
+    if (grade == "동아리") {
+        club.style.display = "block";
+    } else {
+        club.style.display = "none";
+    }
+  }
+  function autonomousclub() {
+    var clubname = document.getElementById("clubname").value;
+    var AclubnameLabel = document.getElementById("AclubnameLabel");
+    var Aclubname = document.getElementById("Aclubname");
+
+    if (clubname == "자율동아리") {
+        AclubnameLabel.style.display = "block";
+        Aclubname.style.display = "block";
+    } else {
+        AclubnameLabel.style.display = "none";
+        Aclubname.style.display = "none";
+    }
+  }
+  
+</script>
+<button onclick="displayInfo()">Confirm</button>
+
+<script>
+function displaySelectedCheckboxes() {
+  var selectBox = document.getElementById("options");
+  var selectedOption = selectBox.options[selectBox.selectedIndex].value;
+  var checkboxes = document.querySelectorAll('#checkboxes input[type="checkbox"]:checked');
+  var selectedCheckboxesDiv = document.getElementById("selectedCheckboxes");
+  selectedCheckboxesDiv.innerHTML = "Selected Option: " + selectedOption + "<br>" + "Selected Checkboxes: ";
+  
+  for (var i = 0; i < checkboxes.length; i++) {
+    selectedCheckboxesDiv.innerHTML += checkboxes[i].id + " ";
+  }
+}
+
+function showCheckboxes() {
+  var selectBox = document.getElementById("options");
+  var selectedOption = selectBox.options[selectBox.selectedIndex].value;
+  var checkboxes = document.getElementById("checkboxes");
+
+  if (selectedOption == "멀티실") {
+    checkboxes.style.display = "block";
+    for (var i = 1; i <= 6; i++) {
+      var checkbox = document.getElementById("checkbox" + i);
+      if (i <= 4) {
+        checkbox.style.display = "inline-block";
+      } else {
+        checkbox.style.display = "none";
+      }
+    }
+  } else if (selectedOption == "자기주도학습실") {
+    checkboxes.style.display = "block";
+    for (var i = 1; i <= 6; i++) {
+      var checkbox = document.getElementById("checkbox" + i);
+      if (i <= 6) {
+        checkbox.style.display = "inline-block";
+      } else {
+        checkbox.style.display = "none";
+      }
+    }
+  } else {
+    checkboxes.style.display = "none";
+  }
+}
+  function displayInfo() {
+    var grade = document.getElementById("grade").value;
+    var classNumber = "";
+    var clubname = "";
+
+    if (grade == "1" || grade == "2" || grade == "3") {
+      var classNumber = document.getElementById("class").value;
+      var number = document.getElementById("Number").value;
+      var NoP = document.getElementById("NoP").value;
+      var space = document.getElementById("options").value;
+    } else if (grade == "동아리") {
+      var clubname = document.getElementById("clubname").value;
+      var CNoP = document.getElementById("CNoP").value;
+      var space = document.getElementById("options").value;
+      var spacenum = document.getElementById("checkboxes").value;
+      if (clubname == "자율동아리") {
+        var clubname = document.getElementById("Aclubname").value;
+        var CNoP = document.getElementById("CNoP").value;
+        var space = document.getElementById("options").value;
+      	var spacenum = document.getElementById("checkbox").value;
+      }
+    }
+
+    var info = "학년: " + grade + "<br>";
+    if (classNumber != "") {
+    	info += "대여 교실: " + space + "<br>";
+			var checkboxes = document.querySelectorAll('#checkboxes input[type="checkbox"]:checked');
+			for (var i = 0; i < checkboxes.length; i++) {
+  		info += checkboxes[i].id + " ";
+}
+			info += "<br>";
+      info += "반: " + classNumber + "<br>";
+      info += "번호: " + number + "<br>";
+      info += "인원 수: " + NoP + "<br>";
+    }
+    if (clubname != "") {
+      info += "동아리명: " + clubname + "<br>";
+      info += "인원 수: " + CNoP + "<br>";
+    }
+
+    document.getElementById("selectedInfo").innerHTML = info;
+  }
+</script>
+
+<div id="selectedInfo"></div>
+

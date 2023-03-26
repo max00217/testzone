@@ -5,5 +5,5 @@ for i = 1, 20000 do
   if os.time() >= endTime then
     break  -- exit the loop if 5 seconds have passed
   end
-  print(i*i*i*i*i)
+  print(i*i)
 end

@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "Run Lua",
+        "label": "Run LuaJIT",
         "type": "shell",
         "command": "luajit",
         "args": [

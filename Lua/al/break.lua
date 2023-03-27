@@ -1,5 +1,5 @@
 startTime = os.time()
-endTime = startTime + 5  -- run for 5 seconds
+endTime = startTime + 0.1  -- run for 5 seconds
 
 for i = 1, 20000 do
   if os.time() >= endTime then

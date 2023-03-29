@@ -32,5 +32,5 @@ fun main() {
     // Ranges
     val range: IntRange = 1..10
 
-    println("Byte: $byte\nShort: $short\nInt: $int\nLong: $long\nFloat: $float\nDouble: $double\nChar: $char\nBoolean: $bool\nSring: $str\nArray: $arr\nNullable types: $nullable\nList: $list\nSet: $set\nMap: $map\nRanges: $range")
+    println("Byte: $byte\nShort: $short\nInt: $int\nLong: $long\nFloat: $float\nDouble: $double\nChar: $char\nBoolean: $bool\nString: $str\nArray: $arr\nNullable types: $nullable\nList: $list\nSet: $set\nMap: $map\nRanges: $range")
 }

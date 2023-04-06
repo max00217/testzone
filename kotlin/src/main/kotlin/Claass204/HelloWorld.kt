@@ -1,5 +1,5 @@
 package Claass204
 
 fun main(){
-println("Hi Mom")
+    println("I'am Kotlin!")
 }

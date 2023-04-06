@@ -20,6 +20,6 @@ fun main(args: Array<String>) {
 
     // check numbers 0 to 500 million
     println("The Munchausen numbers between 0 and 500 million are:")
-    for (i in 0..5000000) if (isMunchausen(i))print ("$i ")
+    for (i in 0..500000000) if (isMunchausen(i))print ("$i ")
     println()
 }

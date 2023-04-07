@@ -8,6 +8,6 @@ co = coroutine.create(myCoroutine)
   
  
 print(coroutine.resume(co))  --> true 1
-print(coroutine.resume(co))  --> true 2  --> false "cannot resume dead coroutine"
-print(coroutine.resume(co))
+print(coroutine.resume(co))  --> true 2  
+print(coroutine.resume(co))  --> false "cannot resume dead coroutine"
 print(coroutine.resume(co))

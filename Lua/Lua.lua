@@ -1,32 +1,32 @@
-mt = {}
-t1 = {}
-t2 = {}
-t3 = {}
- 
-function mt:new(o)
-        o = o or {}
-        setmetatable(o, self)
-        self.__index = self
-        return o
-end
- 
-function mt:funcTest()
-        print('mtFunc')
-end
- 
-function t2:funcTest()
-        print('t2Func')
-end
- 
-function t3:funcTest()
-        print('t3Func')
-end
- 
-t1 = mt:new(t1)
-t1.funcTest()
- 
-t2 = mt:new(t2)
-t2.funcTest()
- 
-t3 = t2:new(t3)
-t3.funcTest()
+local myTable = {}
+
+local mt = {
+  __index = function(table, key)
+    if key == "greeting" then
+      return "Hello!"
+    elseif key == "name" then
+      return "John"
+    else
+      return nil
+    end
+  end,
+
+  __newindex = function(table, key, value)
+    if key == "age" then
+      print("Setting age to:", value)
+      rawset(table, key, value)
+    else
+      print("Invalid key:", key)
+    end
+  end
+}
+
+setmetatable(myTable, mt)
+
+print(myTable.greeting)
+print(myTable.name)
+print(myTable.age)
+
+
+myTable.age = 30
+myTable.gender = "Male"

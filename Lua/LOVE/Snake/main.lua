@@ -5,7 +5,7 @@ function love.load()
     windowwidth = love.graphics.getWidth()
 	windowheight = love.graphics.getHeight()
     snake = {
-        {x = 10, y = 10}
+        {x = 10, y = 10},
         }
     speed = 0.3
     food = {

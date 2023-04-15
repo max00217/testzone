@@ -1,3 +1,3 @@
-for i = 1, 500000 do
+for i = 1, 50000 do
   print(2^i)
 end

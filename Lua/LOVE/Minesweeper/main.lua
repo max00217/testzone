@@ -11,7 +11,7 @@ function love.load()
         numMines = 10,
         numRevealed = 0
     }
-    
+
     for i=1,10 do
         gameState.board[i] = {}
         gameState.revealed[i] = {}
@@ -36,12 +36,14 @@ function love.mousepressed(x, y, button)
     end
     local row, col = math.floor(y / 32) + 1, math.floor(x / 32) + 1
     if button == 1 then
-        if not gameState.revealed[row][col] then
-            revealCell(row, col)
-            revealAdjacentCells(row, col)
+        if gameState.board[row][col] ~= "F" then
+            if not gameState.revealed[row][col] then
+                revealCell(row, col)
+                revealAdjacentCells(row, col)
+            end
         end
     elseif button == 2 then
-        if not gameState.revealed[row][col] then
+        if not gameState.revealed[row][col] then              
             if gameState.board[row][col] == "F" then
                 gameState.board[row][col] = " "
             else

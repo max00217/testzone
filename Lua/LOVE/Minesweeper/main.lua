@@ -8,7 +8,7 @@ function love.load()
         revealed = {},
         gameOver = false,
         win = false,
-        numMines = 10,
+        numMines = 15,
         numRevealed = 0
     }
 
@@ -43,8 +43,12 @@ function love.mousepressed(x, y, button)
             end
         end
     elseif button == 2 then
-        if not gameState.revealed[row][col] then              
-            if gameState.board[row][col] == "F" then
+        if not gameState.revealed[row][col] then
+            if gameState.board[row][col] == "X" then
+                gameState.board[row][col] = "XF"
+            elseif gameState.board[row][col] == "XF" then
+                gameState.board[row][col] = "X"
+            elseif gameState.board[row][col] == "F" then
                 gameState.board[row][col] = " "
             else
                 gameState.board[row][col] = "F"
@@ -116,7 +120,7 @@ function love.draw()
             else
                 love.graphics.setColor(0.3, 0.3, 0.3)
                 love.graphics.rectangle("fill", (j - 1) * 32, (i - 1) * 32, 32, 32)
-                if gameState.board[i][j] == "F" then
+                if gameState.board[i][j] == "F" or gameState.board[i][j] == "XF" then
                     love.graphics.setColor(1, 0, 0)
                     love.graphics.print("F", (j - 1) * 32 + 8, (i - 1) * 32 + 8)
                 end

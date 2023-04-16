@@ -1,5 +1,5 @@
 function love.load()
-    love.window.setTitle("오량인의 성능 안 좋은Minesweeper")
+    love.window.setTitle("오량인의 성능 안 좋은 Minesweeper")
     love.window.setMode(320, 352)
     love.graphics.setBackgroundColor(0.5, 0.5, 0.5)
 
@@ -11,6 +11,7 @@ function love.load()
         numMines = 10,
         numRevealed = 0
     }
+    
     for i=1,10 do
         gameState.board[i] = {}
         gameState.revealed[i] = {}
@@ -28,7 +29,7 @@ function love.load()
         gameState.board[row][col] = "X"
     end
 end
-  
+
 function love.mousepressed(x, y, button)
     if gameState.gameOver then 
         return 
@@ -41,15 +42,29 @@ function love.mousepressed(x, y, button)
         end
     elseif button == 2 then
         if not gameState.revealed[row][col] then
-            gameState.board[row][col] = "F"
+            if gameState.board[row][col] == "F" then
+                gameState.board[row][col] = " "
+            else
+                gameState.board[row][col] = "F"
+            end
         end
     end
-  end
-  
+end
+
+function revealAdjacentCells(row, col)
+    for i=row-1,row+1 do
+        for j=col-1,col+1 do
+            if i >= 1 and i <= 10 and j >= 1 and j <= 10 and not gameState.revealed[i][j] and gameState.board[i][j] ~= "X" and gameState.board[i][j] ~= "F" then
+                revealCell(i, j)
+            end
+        end
+    end
+end
+
 function revealCell(row, col)
     gameState.revealed[row][col] = true
     gameState.numRevealed = gameState.numRevealed + 1
-  
+
     if gameState.board[row][col] == "X" then
         gameState.gameOver = true
     else

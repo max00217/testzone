@@ -36,7 +36,7 @@ function love.mousepressed(x, y, button)
     end
     local row, col = math.floor(y / 32) + 1, math.floor(x / 32) + 1
     if button == 1 then
-        if gameState.board[row][col] ~= "F" and gameState.board[row][col] ~= "XF" then
+        if gameState.board[row][col] ~= "F" or gameState.board[row][col] == "XF" or gameState.board[row][col] ~= "F" then
             if not gameState.revealed[row][col] then
                 revealCell(row, col)
                 revealAdjacentCells(row, col)
@@ -60,7 +60,7 @@ end
 function revealAdjacentCells(row, col)
     for i=row-1,row+1 do
         for j=col-1,col+1 do
-            if i >= 1 and i <= 10 and j >= 1 and j <= 10 and not gameState.revealed[i][j] and gameState.board[i][j] ~= "X" and gameState.board[i][j] ~= "F" then
+            if i >= 1 and i <= 10 and j >= 1 and j <= 10 and not gameState.revealed[i][j] and gameState.board[i][j] ~= "X" then
                 revealCell(i, j)
             end
         end
@@ -93,7 +93,10 @@ end
 function revealAdjacentCells(row, col)
     for i=row-1,row+1 do
         for j=col-1,col+1 do
-            if i >= 1 and i <= 10 and j >= 1 and j <= 10 and not gameState.revealed[i][j] and gameState.board[i][j] ~= "X" then
+            if i >= 1 and i <= 10 and j >= 1 and j <= 10 and not gameState.revealed[i][j] and 
+            gameState.board[i][j] ~= "F" and 
+            gameState.board[i][j] ~= "X" and
+            gameState.board[i][j] ~= "XF" then
             revealCell(i, j)
             end
         end

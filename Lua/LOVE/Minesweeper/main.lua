@@ -36,7 +36,7 @@ function love.mousepressed(x, y, button)
     end
     local row, col = math.floor(y / 32) + 1, math.floor(x / 32) + 1
     if button == 1 then
-        if gameState.board[row][col] ~= "F" then
+        if gameState.board[row][col] ~= "F" and gameState.board[row][col] ~= "XF" then
             if not gameState.revealed[row][col] then
                 revealCell(row, col)
                 revealAdjacentCells(row, col)

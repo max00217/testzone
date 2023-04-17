@@ -31,8 +31,8 @@ function love.load()
 end
 
 function love.mousepressed(x, y, button)
-    if gameState.gameOver then 
-        return 
+    if gameState.gameOver then
+        return
     end
     local row, col = math.floor(y / 32) + 1, math.floor(x / 32) + 1
     if button == 1 then
@@ -89,7 +89,7 @@ function revealCell(row, col)
         end
     end
 end
-  
+
 function revealAdjacentCells(row, col)
     for i=row-1,row+1 do
         for j=col-1,col+1 do
@@ -136,6 +136,14 @@ function love.draw()
             love.graphics.print("You win!", 128, 320)
         else
             love.graphics.print("Game over", 128, 320)
+            for i=1,10 do
+                for j=1,10 do
+                    if gameState.board[i][j] == "X" then
+                        love.graphics.setColor(1, 0, 0)
+                        love.graphics.rectangle("fill", (j - 1) * 32, (i - 1) * 32, 32, 32)
+                    end
+                end
+            end 
         end
     end
 end

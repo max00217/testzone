@@ -14,3 +14,43 @@
 2023-02-05 01:27:32 | [INFO]    | Shard 0 : Received HELLO
 2023-02-05 01:27:32 | [INFO]    | Shard 0 : Received READY
 2023-02-05 01:27:32 | [WARNING] | ...loads\projects\Personal-Projects\Lua\Discordbot\main.lua:8: Client.setGame is deprecated; use Client.setActivity instead
+2023-04-18 10:46:39 | [INFO]    | Discordia 2.11.2
+2023-04-18 10:46:39 | [INFO]    | Connecting to Discord...
+2023-04-18 10:46:39 | [INFO]    | Authenticated as 나레이션#2823
+2023-04-18 10:46:40 | [INFO]    | Launching shard 0 (1 out of 1)...
+2023-04-18 10:46:40 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2023-04-18 10:46:40 | [INFO]    | Shard 0 : Received HELLO
+2023-04-18 10:46:40 | [INFO]    | Shard 0 : Received READY
+2023-04-18 10:46:40 | [WARNING] | ...ers\makpu\Downloads\proj\project\Lua\Discordbot\main.lua:8: Client.setGame is deprecated; use Client.setActivity instead
+2023-04-18 10:47:21 | [INFO]    | Discordia 2.11.2
+2023-04-18 10:47:21 | [INFO]    | Connecting to Discord...
+2023-04-18 10:47:21 | [INFO]    | Authenticated as 나레이션#2823
+2023-04-18 10:47:21 | [INFO]    | Launching shard 0 (1 out of 1)...
+2023-04-18 10:47:21 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2023-04-18 10:47:21 | [INFO]    | Shard 0 : Received HELLO
+2023-04-18 10:47:22 | [INFO]    | Shard 0 : Received READY
+2023-04-18 10:47:22 | [WARNING] | ...ers\makpu\Downloads\proj\project\Lua\Discordbot\main.lua:8: Client.setGame is deprecated; use Client.setActivity instead
+2023-04-18 10:48:15 | [INFO]    | Discordia 2.11.2
+2023-04-18 10:48:15 | [INFO]    | Connecting to Discord...
+2023-04-18 10:48:15 | [INFO]    | Authenticated as 나레이션#2823
+2023-04-18 10:48:15 | [INFO]    | Launching shard 0 (1 out of 1)...
+2023-04-18 10:48:16 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2023-04-18 10:48:16 | [INFO]    | Shard 0 : Received HELLO
+2023-04-18 10:48:16 | [INFO]    | Shard 0 : Received READY
+2023-04-18 10:48:16 | [WARNING] | ...ers\makpu\Downloads\proj\project\Lua\Discordbot\main.lua:8: Client.setGame is deprecated; use Client.setActivity instead
+2023-04-18 10:50:11 | [INFO]    | Discordia 2.11.2
+2023-04-18 10:50:11 | [INFO]    | Connecting to Discord...
+2023-04-18 10:50:12 | [INFO]    | Authenticated as 나레이션#2823
+2023-04-18 10:50:12 | [INFO]    | Launching shard 0 (1 out of 1)...
+2023-04-18 10:50:12 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2023-04-18 10:50:12 | [INFO]    | Shard 0 : Received HELLO
+2023-04-18 10:50:13 | [INFO]    | Shard 0 : Received READY
+2023-04-18 10:50:13 | [WARNING] | ...ers\makpu\Downloads\proj\project\Lua\Discordbot\main.lua:8: Client.setGame is deprecated; use Client.setActivity instead
+2023-04-18 10:50:21 | [INFO]    | Discordia 2.11.2
+2023-04-18 10:50:21 | [INFO]    | Connecting to Discord...
+2023-04-18 10:50:21 | [INFO]    | Authenticated as 나레이션#2823
+2023-04-18 10:50:21 | [INFO]    | Launching shard 0 (1 out of 1)...
+2023-04-18 10:50:21 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2023-04-18 10:50:21 | [INFO]    | Shard 0 : Received HELLO
+2023-04-18 10:50:22 | [INFO]    | Shard 0 : Received READY
+2023-04-18 10:50:22 | [WARNING] | ...ers\makpu\Downloads\proj\project\Lua\Discordbot\main.lua:8: Client.setGame is deprecated; use Client.setActivity instead

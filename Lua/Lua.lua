@@ -1,0 +1,3 @@
+ALL = nil
+
+print(ALL)

@@ -54,3 +54,22 @@
 2023-04-18 10:50:21 | [INFO]    | Shard 0 : Received HELLO
 2023-04-18 10:50:22 | [INFO]    | Shard 0 : Received READY
 2023-04-18 10:50:22 | [WARNING] | ...ers\makpu\Downloads\proj\project\Lua\Discordbot\main.lua:8: Client.setGame is deprecated; use Client.setActivity instead
+2023-04-19 14:50:45 | [INFO]    | Discordia 2.11.2
+2023-04-19 14:50:45 | [INFO]    | Connecting to Discord...
+2023-04-19 14:50:46 | [INFO]    | Authenticated as 나레이션#2823
+2023-04-19 14:50:47 | [INFO]    | Launching shard 0 (1 out of 1)...
+2023-04-19 14:50:47 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2023-04-19 14:50:47 | [INFO]    | Shard 0 : Received HELLO
+2023-04-19 14:50:48 | [INFO]    | Shard 0 : Received READY
+2023-04-19 14:50:48 | [WARNING] | ...ers\makpu\Downloads\proj\project\Lua\Discordbot\main.lua:8: Client.setGame is deprecated; use Client.setActivity instead
+2023-04-19 14:50:51 | [INFO]    | Discordia 2.11.2
+2023-04-19 14:50:51 | [INFO]    | Connecting to Discord...
+2023-04-19 14:50:51 | [ERROR]   | Could not authenticate, check token: ...ownloads/proj/project/Lua/Discordbot/deps/http-codec.lua:256: chunk-size field too large
+2023-04-19 14:51:00 | [INFO]    | Discordia 2.11.2
+2023-04-19 14:51:00 | [INFO]    | Connecting to Discord...
+2023-04-19 14:51:01 | [INFO]    | Authenticated as 나레이션#2823
+2023-04-19 14:51:01 | [INFO]    | Launching shard 0 (1 out of 1)...
+2023-04-19 14:51:01 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2023-04-19 14:51:01 | [INFO]    | Shard 0 : Received HELLO
+2023-04-19 14:51:02 | [INFO]    | Shard 0 : Received READY
+2023-04-19 14:51:02 | [WARNING] | ...ers\makpu\Downloads\proj\project\Lua\Discordbot\main.lua:8: Client.setGame is deprecated; use Client.setActivity instead

@@ -1,3 +1,4 @@
+---@diagnostic disable: redundant-parameter, need-check-nil
 --[[lit-meta
   name = "creationix/coro-websocket"
   version = "3.1.1"

@@ -1,3 +1,4 @@
+---@diagnostic disable: deprecated
 --[[lit-meta
   name = "creationix/coro-http"
   version = "3.2.3"

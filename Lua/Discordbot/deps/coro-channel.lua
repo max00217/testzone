@@ -1,3 +1,4 @@
+---@diagnostic disable: deprecated
 --[[lit-meta
   name = "creationix/coro-channel"
   version = "3.0.3"

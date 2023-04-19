@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local json = require('json')
 local timer = require('timer')
 

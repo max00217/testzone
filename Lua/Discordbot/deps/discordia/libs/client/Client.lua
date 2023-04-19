@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 --[=[
 @c Client x Emitter
 @t ui

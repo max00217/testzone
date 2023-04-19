@@ -7,18 +7,16 @@ function isMunchausen (n)
     return sum == n
 end
 
--- alternative, faster version based on the C version, 
--- avoiding string manipulation, for Lua 5.3 or higher
 local function isMunchausen (n)
     local sum, digit, acc = 0, 0, n
     while acc > 0 do
         digit = acc % 10.0
         sum = sum + digit ^ digit
-        acc = math.floor(acc / 10) -- integer div
+        acc = math.floor(acc / 10)
     end
     return sum == n
 end
 
-for i = 1, 5000000 do
+for i = 1, 500000 do
     if isMunchausen(i) then print(i) end
 end 

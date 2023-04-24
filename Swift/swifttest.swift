@@ -1,14 +1,11 @@
-func factorial(_ num: Int) -> Int {
-    if num == 0 {
-        return 1
-    }
-    return num * factorial(num - 1)
+import Foundation
+
+func isMünchhausen(_ n: Int) -> Bool {
+  let nums = String(n).map(String.init).compactMap(Int.init)
+
+  return Int(nums.map({ pow(Double($0), Double($0)) }).reduce(0, +)) == n
 }
 
-print("팩토리얼을 계산할 숫자를 입력하세요:")
-if let input = readLine(), let number = Int(input) {
-    let result = factorial(number)
-    print("\(number)! = \(result)")
-} else {
-    print("잘못된 입력입니다.")
+for i in 1...5000 where isMünchhausen(i) {
+  print(i)
 }

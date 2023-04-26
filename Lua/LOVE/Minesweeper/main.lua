@@ -70,18 +70,17 @@ end
 function revealCell(row, col)
     gameState.revealed[row][col] = true
     gameState.numRevealed = gameState.numRevealed + 1
-
     if gameState.board[row][col] == "X" then
         gameState.gameOver = true
     else
         local count = 0
         for i=row-1,row+1 do
             for j=col-1,col+1 do
-            if i >= 1 and i <= 10 and j >= 1 and j <= 10 and gameState.board[i][j] == "X" then
-                count = count + 1
+                if i >= 1 and i <= 10 and j >= 1 and j <= 10 and (gameState.board[i][j] == "X" or gameState.board[i][j] == "XF") then
+                    count = count + 1
+                end
             end
         end
-    end
         gameState.board[row][col] = count > 0 and count or " "
         if gameState.numRevealed == 100 - gameState.numMines then
             gameState.gameOver = true

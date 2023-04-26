@@ -18,7 +18,7 @@ from itertools import cycle
 from discord.ext import commands
 from discord.utils import get
 from discord import FFmpegPCMAudio
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from discord import TextChannel
 from youtube_dl import YoutubeDL
 
@@ -95,7 +95,6 @@ async def Google(ctx, *args):
 
 @app.command(name='ㅇ')
 async def yt(ctx, *, search):
-
         query_string = urllib.parse.urlencode({'search_query': search})
         htm_content = urllib.request.urlopen(
             'http://www.youtube.com/results?' + query_string)

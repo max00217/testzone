@@ -1,6 +1,7 @@
 package Claass204
 
-fun main(){
-    println("I'm Kotlin!")
-    println("Hi Mom")
+fun main() {
+    val A: Int = readln().toInt()
+    val B: Int = readln().toInt()
+    print(A + B)
 }

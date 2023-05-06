@@ -1,10 +1,13 @@
-<<<<<<< HEAD
-A, B = io.read("n", "n")
+io.write("W: ")
+local W = io.read("*n")
+io.write("Q: ")
+local Q = io.read("*n")
+local QtoStr = tostring(Q)
+local q = tonumber(string.sub(QtoStr, 1, 1))
+local w = tonumber(string.sub(QtoStr, 2, 2))
+local e = tonumber(string.sub(QtoStr, 3, 3))
 
-print(A + B)
-print(A - B)
-print(A * B)
-print(tonumber(string.format("%.0f", (A / B))))
-print(A % B)
-=======
->>>>>>> f2883773895fdf8d09ffbc3f2e1cfb2f83cef137
+print(W * e)
+print(W * w)
+print(W * q)
+print(W * Q)

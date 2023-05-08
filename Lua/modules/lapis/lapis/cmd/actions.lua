@@ -31,6 +31,29 @@ add_environment_argument = function(command, summary)
     return _with_0
   end
 end
+local custom_action
+custom_action = function(t)
+  t.test_available = function()
+    return pcall(function()
+      return require("lapis.cmd.actions." .. tostring(t.name))
+    end)
+  end
+  t.argparse = function(command)
+    do
+      local _with_0 = command
+      _with_0:handle_options(false)
+      _with_0:argument("sub_command_args", "Arguments to command"):argname("<args>"):args("*")
+      return _with_0
+    end
+  end
+  t[1] = function(self, args)
+    local action = require("lapis.cmd.actions." .. tostring(t.name))
+    assert(action.argparser, "Your lapis-" .. tostring(t.name) .. " module is too out of date for this version of Lapis, please update it")
+    local parse_args = action.argparser()
+    return action[1](self, parse_args:parse(args.sub_command_args), args)
+  end
+  return t
+end
 local COMMANDS = {
   {
     name = "new",
@@ -43,18 +66,19 @@ local COMMANDS = {
         _with_0:flag("--etlua-config", "Use etlua for templated configuration files (eg. nginx.conf)")
         _with_0:flag("--git", "Generate default .gitignore file")
         _with_0:flag("--tup", "Generate default Tupfile")
+        _with_0:flag("--rockspec", "Generate a rockspec file for managing dependencies")
         _with_0:flag("--force", "Bypass errors when detecting functional server environment")
         return _with_0
       end
     end,
     function(self, args)
-      local server_actions
+      local server
       if args.cqueues then
-        server_actions = require("lapis.cmd.cqueues.actions")
+        server = "cqueues"
       else
-        server_actions = require("lapis.cmd.nginx.actions")
+        server = "nginx"
       end
-      server_actions.new(self, args)
+      local server_actions = require("lapis.cmd." .. tostring(server) .. ".actions")
       local language
       if args.lua then
         language = "lua"
@@ -63,22 +87,53 @@ local COMMANDS = {
       else
         language = default_language()
       end
-      local _exp_0 = language
-      if "lua" == _exp_0 then
-        self:write_file_safe("app.lua", require("lapis.cmd.templates.app_lua"))
-        self:write_file_safe("models.lua", require("lapis.cmd.templates.models_lua"))
-      elseif "moonscript" == _exp_0 then
-        self:write_file_safe("app.moon", require("lapis.cmd.templates.app"))
-        self:write_file_safe("models.moon", require("lapis.cmd.templates.models"))
-      end
+      local template_flags = {
+        "--" .. tostring(language)
+      }
+      server_actions.new(self, args, template_flags)
+      self:execute({
+        "generate",
+        "application",
+        unpack(template_flags)
+      })
+      self:execute({
+        "generate",
+        "models",
+        unpack(template_flags)
+      })
       if args.git then
-        self:write_file_safe(".gitignore", require("lapis.cmd.templates.gitignore")(args))
+        local gitignore_flags = {
+          "--" .. tostring(language),
+          "--" .. tostring(server)
+        }
+        if args.tup then
+          table.insert(gitignore_flags, "--tup")
+        end
+        self:execute({
+          "generate",
+          "gitignore",
+          unpack(gitignore_flags)
+        })
       end
       if args.tup then
-        local tup_files = require("lapis.cmd.templates.tup")
-        for fname, content in pairs(tup_files) do
-          self:write_file_safe(fname, content)
+        self:execute({
+          "generate",
+          "tupfile"
+        })
+      end
+      if args.rockspec then
+        local rockspec_flags = { }
+        if language == "moonscript" then
+          table.insert(rockspec_flags, "--moonscript")
         end
+        if server == "cqueues" then
+          table.insert(rockspec_flags, "--cqueues")
+        end
+        return self:execute({
+          "generate",
+          "rockspec",
+          unpack(rockspec_flags)
+        })
       end
     end
   },
@@ -213,6 +268,7 @@ local COMMANDS = {
       do
         local _with_0 = command
         _with_0:option("--migrations-module", "Module to load for migrations"):argname("<module>"):default("migrations")
+        _with_0:flag("--dry-run", "Immediately roll back after appyling migrations. Forces migrations to run in a transaction")
         _with_0:option("--transaction"):args("?"):choices({
           "global",
           "individual"
@@ -230,7 +286,8 @@ local COMMANDS = {
       print(colors("%{bright yellow}Running migrations for environment:%{reset} " .. tostring(args.environment)))
       local migrations = require("lapis.db.migrations")
       migrations.run_migrations(require(args.migrations_module), nil, {
-        transaction = args.transaction
+        transaction = args.transaction,
+        dry_run = args.dry_run
       })
       return env.pop()
     end
@@ -474,53 +531,18 @@ local COMMANDS = {
       return action[1](self, unpack(command_args))
     end
   },
-  {
+  custom_action({
     name = "systemd",
-    help = "Generate systemd service file",
-    test_available = function()
-      return pcall(function()
-        return require("lapis.cmd.actions.systemd")
-      end)
-    end,
-    argparse = function(command)
-      do
-        local _with_0 = command
-        _with_0:argument("sub_command", "Sub command to execute"):choices({
-          "service"
-        })
-        add_environment_argument(command, "Environment to create service file for")
-        _with_0:flag("--install", "Installs the service file to the system, requires sudo permission")
-        return _with_0
-      end
-    end,
-    function(self, args)
-      local action = require("lapis.cmd.actions.systemd")
-      return action[1](self, args, args.sub_command, args.environment)
-    end
-  },
-  {
+    help = "Generate systemd service file"
+  }),
+  custom_action({
     name = "annotate",
-    help = "Annotate model files with schema information",
-    test_available = function()
-      return pcall(function()
-        return require("lapis.cmd.actions.annotate")
-      end)
-    end,
-    argparse = function(command)
-      do
-        local _with_0 = command
-        _with_0:handle_options(false)
-        _with_0:argument("sub_command_args", "Arguments to command"):argname("<args>"):args("*")
-        return _with_0
-      end
-    end,
-    function(self, args)
-      local action = require("lapis.cmd.actions.annotate")
-      assert(action.argparser, "Your lapis-annotate module is too out of date for this version of Lapis, please update it")
-      local parse_args = action.argparser()
-      return action[1](self, parse_args:parse(args.sub_command_args), args)
-    end
-  },
+    help = "Annotate model files with schema information"
+  }),
+  custom_action({
+    name = "eswidget",
+    help = "Widget asset compilation and build generation"
+  }),
   {
     name = "debug",
     hidden = true,
@@ -650,8 +672,18 @@ do
             return self:fail_with_message(err)
           end
         end,
-        mod_to_path = function(self, mod)
-          return mod:gsub("%.", "/")
+        mod_to_path = function(self, mod, lang)
+          local p = mod:gsub("%.", "/")
+          local _exp_0 = lang
+          if "lua" == _exp_0 then
+            return tostring(p) .. ".lua"
+          elseif "moonscript" == _exp_0 then
+            return tostring(p) .. ".moon"
+          elseif nil == _exp_0 then
+            return p
+          else
+            return error("Got unknown language for mod_to_path: " .. tostring(lang))
+          end
         end,
         default_language = default_language()
       }
@@ -660,6 +692,7 @@ do
       if self.path.exists(file) then
         return nil, "file already exists: " .. tostring(file)
       end
+      assert(type(content) == "string", "write_file_safe: content must be a string, got " .. tostring(type(content)))
       do
         local prefix = file:match("^(.+)/[^/]+$")
         if prefix then

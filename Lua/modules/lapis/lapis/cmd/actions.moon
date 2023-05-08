@@ -22,6 +22,25 @@ add_environment_argument = (command, summary) ->
           error "You tried to set the environment twice. Use either --environment or the environment argument, not both"
         args.environment = val
 
+-- custom_action provides a top level command for triggered a third-party
+-- action, eg for lapis-annotate and lapis-systemd
+custom_action = (t) ->
+  t.test_available = ->
+    pcall -> require "lapis.cmd.actions.#{t.name}"
+
+  t.argparse = (command) ->
+    with command
+      \handle_options false
+      \argument("sub_command_args", "Arguments to command")\argname("<args>")\args("*")
+
+  t[1] = (args) =>
+    action = require "lapis.cmd.actions.#{t.name}"
+    assert action.argparser, "Your lapis-#{t.name} module is too out of date for this version of Lapis, please update it"
+    parse_args = action.argparser!
+    action[1] @, parse_args\parse(args.sub_command_args), args
+
+  t
+
 COMMANDS = {
   {
     name: "new"
@@ -41,15 +60,17 @@ COMMANDS = {
         \flag "--etlua-config", "Use etlua for templated configuration files (eg. nginx.conf)"
         \flag "--git", "Generate default .gitignore file"
         \flag "--tup", "Generate default Tupfile"
+        \flag "--rockspec", "Generate a rockspec file for managing dependencies"
+
         \flag "--force", "Bypass errors when detecting functional server environment"
 
     (args) =>
-      server_actions = if args.cqueues
-        require "lapis.cmd.cqueues.actions"
+      server = if args.cqueues
+        "cqueues"
       else
-        require "lapis.cmd.nginx.actions"
+        "nginx"
 
-      server_actions.new @, args
+      server_actions = require "lapis.cmd.#{server}.actions"
 
       language = if args.lua
         "lua"
@@ -58,21 +79,32 @@ COMMANDS = {
       else
         default_language!
 
-      switch language
-        when "lua"
-          @write_file_safe "app.lua", require "lapis.cmd.templates.app_lua"
-          @write_file_safe "models.lua", require "lapis.cmd.templates.models_lua"
-        when "moonscript"
-          @write_file_safe "app.moon", require "lapis.cmd.templates.app"
-          @write_file_safe "models.moon", require "lapis.cmd.templates.models"
+      template_flags = { "--#{language}" }
+
+      server_actions.new @, args, template_flags
+      @execute {"generate", "application", unpack template_flags }
+      @execute {"generate", "models", unpack template_flags }
 
       if args.git
-        @write_file_safe ".gitignore", require("lapis.cmd.templates.gitignore") args
+        gitignore_flags = { "--#{language}", "--#{server}" }
+
+        if args.tup
+          table.insert gitignore_flags, "--tup"
+
+        @execute {"generate", "gitignore", unpack gitignore_flags }
 
       if args.tup
-        tup_files = require "lapis.cmd.templates.tup"
-        for fname, content in pairs tup_files
-          @write_file_safe fname, content
+        @execute {"generate", "tupfile" }
+
+      if args.rockspec
+        rockspec_flags = {}
+        if language == "moonscript"
+          table.insert rockspec_flags, "--moonscript"
+
+        if server == "cqueues"
+          table.insert rockspec_flags, "--cqueues"
+
+        @execute {"generate", "rockspec", unpack rockspec_flags }
   }
 
   {
@@ -189,6 +221,7 @@ COMMANDS = {
       add_environment_argument command
       with command
         \option("--migrations-module", "Module to load for migrations")\argname("<module>")\default "migrations"
+        \flag("--dry-run", "Immediately roll back after appyling migrations. Forces migrations to run in a transaction")
         \option("--transaction")\args("?")\choices({"global", "individual"})\action (args, name, val) ->
           -- flatten the table that's created from args("?")
           args[name] = val[next(val)] or "global"
@@ -202,6 +235,7 @@ COMMANDS = {
       migrations = require "lapis.db.migrations"
       migrations.run_migrations require(args.migrations_module), nil, {
         transaction: args.transaction
+        dry_run: args.dry_run
       }
 
       env.pop!
@@ -409,43 +443,19 @@ COMMANDS = {
       action[1] @, unpack command_args
   }
 
-  -- NOTE: to simplify migration to argparse we are currently including the arg
-  -- spec for these modules within lapis directly, even though they are
-  -- separate installs
-
-  {
+  custom_action {
     name: "systemd"
     help: "Generate systemd service file"
-    test_available: ->
-      pcall -> require "lapis.cmd.actions.systemd"
-
-    argparse: (command) ->
-      with command
-        \argument("sub_command", "Sub command to execute")\choices {"service"}
-        add_environment_argument command, "Environment to create service file for"
-        \flag "--install", "Installs the service file to the system, requires sudo permission"
-
-    (args) =>
-      action = require "lapis.cmd.actions.systemd"
-      action[1] @, args, args.sub_command, args.environment
   }
 
-  {
+  custom_action {
     name: "annotate"
     help: "Annotate model files with schema information"
-    test_available: ->
-      pcall -> require "lapis.cmd.actions.annotate"
+  }
 
-    argparse: (command) ->
-      with command
-        \handle_options false
-        \argument("sub_command_args", "Arguments to command")\argname("<args>")\args("*")
-
-    (args) =>
-      action = require "lapis.cmd.actions.annotate"
-      assert action.argparser, "Your lapis-annotate module is too out of date for this version of Lapis, please update it"
-      parse_args = action.argparser!
-      action[1] @, parse_args\parse(args.sub_command_args), args
+  custom_action {
+    name: "eswidget"
+    help: "Widget asset compilation and build generation"
   }
 
   {
@@ -550,8 +560,7 @@ class CommandRunner
       print colors "%{bright}%{red}Aborting:%{reset} " .. msg
       os.exit 1
 
-
-  -- scope used for template objects
+  -- self object used for generator templates
   make_template_writer: =>
     {
       command_runner: @
@@ -560,12 +569,26 @@ class CommandRunner
         unless success
           @fail_with_message err
 
-      mod_to_path: (mod) => mod\gsub "%.", "/"
+      mod_to_path: (mod, lang) =>
+        p = mod\gsub "%.", "/"
+
+        switch lang
+          when "lua"
+            "#{p}.lua"
+          when "moonscript"
+            "#{p}.moon"
+          when nil
+            p
+          else
+            error "Got unknown language for mod_to_path: #{lang}"
+
+
       default_language: default_language!
     }
 
   write_file_safe: (file, content) =>
     return nil, "file already exists: #{file}" if @path.exists file
+    assert type(content) == "string", "write_file_safe: content must be a string, got #{type content}"
 
     if prefix = file\match "^(.+)/[^/]+$"
       @path.mkdir prefix unless @path.exists prefix

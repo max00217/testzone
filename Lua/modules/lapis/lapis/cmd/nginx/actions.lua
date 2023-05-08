@@ -1,32 +1,27 @@
+local unpack = unpack or table.unpack
 return {
-  new = function(self, args)
+  new = function(self, args, template_flags)
     local find_nginx
     find_nginx = require("lapis.cmd.nginx").find_nginx
     local nginx = find_nginx()
     if not nginx and not args.force then
       self:fail_with_message("Unable to find an OpenResty installation on your system. You can bypass this error with --force or use LAPIS_OPENRESTY environment variable to directly specify the path of the OpenResty binary")
     end
-    local config_path, config_path_etlua
-    do
-      local _obj_0 = require("lapis.cmd.nginx").nginx_runner
-      config_path, config_path_etlua = _obj_0.config_path, _obj_0.config_path_etlua
-    end
-    if self.path.exists(config_path) or self.path.exists(config_path_etlua) then
-      self:fail_with_message("nginx.conf already exists")
-    end
-    if args.etlua_config then
-      self:write_file_safe(config_path_etlua, require("lapis.cmd.nginx.templates.config_etlua"))
-    else
-      self:write_file_safe(config_path, require("lapis.cmd.nginx.templates.config"))
-    end
-    self:write_file_safe("mime.types", require("lapis.cmd.nginx.templates.mime_types"))
-    local writer = self:make_template_writer()
-    local config_tpl = require("lapis.cmd.cqueues.templates.config")
-    return config_tpl.write(writer, setmetatable({
-      server = "nginx"
-    }, {
-      __index = args
-    }))
+    self:execute({
+      "generate",
+      "config",
+      "--nginx",
+      unpack(template_flags)
+    })
+    self:execute({
+      "generate",
+      "nginx.config",
+      args.etlua_config and "--etlua" or nil
+    })
+    return self:execute({
+      "generate",
+      "nginx.mime_types"
+    })
   end,
   server = function(self, args)
     local find_nginx, start_nginx, write_config_for

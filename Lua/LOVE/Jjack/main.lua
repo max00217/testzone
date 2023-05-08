@@ -1,9 +1,11 @@
 local suit = require("suit")
 
 function love.load()
+    font = love.graphics.newFont("BMDOHYEON.ttf", 40)
+    love.graphics.setFont(font)
 	love.window.setMode(500, 300)
     love.window.setTitle("오량인의 성능 안 좋은 2-4반 전용 자리 선출기")
-    love.graphics.setBackgroundColor(0.2, 0.2, 0.5)
+    love.graphics.setBackgroundColor(0.2, 0.5, 0.5)
     class = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 35}
     n1 = ""
     n2 = ""
@@ -43,7 +45,7 @@ function love.update(dt)
         end
     end
 
-    button = suit.Button("Press to Choosing a Classroom Seat", suit.layout:row(100,30), 250, 295, 30 ,70)
+    button = suit.Button("Press", suit.layout:row(100,30), 250, 295, 30, 70)
 
     if button.hit then
         n1 = class[love.math.random(#class)]
@@ -64,6 +66,6 @@ end
 
 function love.draw()
     suit.draw()
-    love.graphics.print(n1, 120, 120, 0, 3)
-    love.graphics.print(n2, 340, 120, 0, 3)
+    love.graphics.print(n1, 120, 120, 0, 1)
+    love.graphics.print(n2, 340, 120, 0, 1)
 end

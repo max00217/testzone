@@ -17,4 +17,3 @@ app:get("/test.json", function(self)
 end)
 
 return app
-

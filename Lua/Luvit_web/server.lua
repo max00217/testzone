@@ -29,6 +29,7 @@ local server = http.createServer(function (req, res)
   end
 end)
 
-server:listen(8080, function ()
-  print("Server listening at http://localhost:8080/")
+server:listen(8080, "0.0.0.0", function ()
+  print("Server listening at http://0.0.0.0:8080/")
+  --At desktop, use this link http://121.153.4.209:8080/
 end)

@@ -153,7 +153,6 @@ function love.update(dt)
 			end
 		end
 	end
-    
 end
 
 function love.mousereleased(x, y, button, istouch, presses)

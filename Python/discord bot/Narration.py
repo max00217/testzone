@@ -43,10 +43,6 @@ async def on_ready():
      await app.change_presence(status=discord.Status.online, activity=discord.Game(next(status)))
     change_status.start() #디스코드 상태 메시지 변경
 
-
-
-
-
 @app.command(name='결정')
 async def clear(ctx, amount = 5):
     if ctx.message.author.guild_permissions.administrator:
@@ -54,44 +50,23 @@ async def clear(ctx, amount = 5):
         return await ctx.send(f'```메시지 {amount}개, 시체로 결정.```') #메시지 일괄삭제
     await ctx.send("```무, 무슨```")
 
-
-
-
-            
-
 @app.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
     	await ctx.send("```Aㅏ... 읎어요.```") #정의되지 않은 명령어에 대한 답변
 
-
-
-
-
 @app.command()  
 async def 김두한(ctx):
     await ctx.send('```1972년 11월 21일, 김두한은 쓰러졌다.```') #메시지 전달
-
-
-
-
 
 @app.command()  
 async def 영사기(ctx):
     await ctx.send('https://tenor.com/view/%ED%8F%AD%EB%B0%9C-%EC%8B%AC%EC%98%81-%EC%95%BC%EC%9D%B8%EC%8B%9C%EB%8C%80-gif-21868675')  
 
-
-
-
-
 @app.command(name='ㄱ')
 async def Google(ctx, *args):
   parameter = ' '.join(args).replace(' ', '+') #공백을 +로 전환
   await ctx.reply(f'https://www.google.com/search?q={parameter}') #구글에서 검색
-
-
-
-
 
 @app.command(name='ㅇ')
 async def yt(ctx, *, search):
@@ -102,18 +77,10 @@ async def yt(ctx, *, search):
                                     htm_content.read().decode())
         await ctx.reply('http://www.youtube.com/watch?v=' + search_results[0]) #유튜브에서 검색 + 재생 링크 제공
 
-
-
-
-
 @app.command(name='ㄴ')
 async def Namu(ctx, *args):
   parameter = ' '.join(args).replace(' ', '%20') #공백을 %20로 전환
   await ctx.reply(f'https://namu.wiki/w/{parameter}') #나무위키에서 검색
-
-
-
-
 
 @app.command(name='명령어')
 async def help(ctx):
@@ -136,37 +103,23 @@ async def help(ctx):
     embed.add_field(name='&r ', value='일시 정지된 음악을 재개함', inline=False)
     await ctx.send(embed=embed) #임베드 메시지 출력
 
-
-
-
-  
 @app.command(name='QR')
 async def code(ctx): 
     await ctx.send('https://dl.dropboxusercontent.com/s/atmxhf5b3kap8j7/roll.png?dl=0dl') #이미지 전달
 
-
- 
 @app.command(name='Ytube')
 async def rick(ctx):
     await ctx.send('||https://www.youtube.com/watch?v=dQw4w9WgXcQ||') #링크
-
-
 
 @app.command()
 async def diceroll(ctx):
     randnum = random.randint(1, 20)  
     await ctx.send(f'```주사위 결과는 {randnum}.```') #주사위
 
-
-
 @app.command()
 async def numdice(ctx, number):
     await ctx.send(f'```주사위 결과는 {random.randint(1,int(number))} ({number} 중)```') #숫자 지정 주사위
 
-
-
-
-    
 @app.command()
 async def rsp(ctx, user: str):  
     rps_table = ['가위', '바위', '보']
@@ -178,10 +131,6 @@ async def rsp(ctx, user: str):
         await ctx.send(f'```{user} vs {bot}  You Win```')
     else:
         await ctx.send(f'```{user} vs {bot}  You Lose```') #가위바위보 명령어
-
-
-
-
 
 @app.command()
 async def RSP(ctx, user: str):  
@@ -195,30 +144,17 @@ async def RSP(ctx, user: str):
     else:
         await ctx.send(f'```{user} vs {bot}  You Lose```')
 
-
-
-
-
 @app.command()
 async def 수정(ctx):
     msg = await ctx.send('```0.5초 뒤에 수정```')
     await asyncio.sleep(0.5)
     await msg.edit(content='```아무 일도 없었다.```') #봇 메시지 수정 명령어
 
-
-
-
-
 @app.command()
 async def 삭제(ctx):
     msg = await ctx.send("```1초 뒤 삭제```")
     await asyncio.sleep(1.0)
     await msg.delete() #봇 메시지 삭제 명령어
-
-
-
-
-
 
 @app.command()
 async def timeout_user(*, user_id: int, guild_id: int, until):
@@ -231,11 +167,6 @@ async def timeout_user(*, user_id: int, guild_id: int, until):
            return True
         return False #타임아웃 베이스
 
-
-
-
-
-
 @app.command(name='단죄')
 async def timeout(ctx: commands.Context, member: discord.Member, until: int):
     if ctx.message.author.guild_permissions.administrator:
@@ -245,17 +176,12 @@ async def timeout(ctx: commands.Context, member: discord.Member, until: int):
 
     await ctx.send("```무, 무슨```") #타임아웃 본 명령어
 
-
-
-
 @app.command(name='해방')
 async def falling(ctx: commands.Context, member: discord.Member, int = 0):
     if ctx.message.author.guild_permissions.administrator:
         fall = await timeout_user(user_id=member.id, guild_id=ctx.guild.id, until=int)
         if fall:
             return await ctx.send(f'```{member}, 해방정국, 그랬다. 해방은 곧 사회의 혼란으로 이어졌다. ```')
-
-
 
 @app.command(name='관리자')
 async def mangerCheck(ctx):
@@ -282,11 +208,6 @@ async def play(ctx, url,):
     else:
         await ctx.send("Bot is already playing")
           #유튜브 링크 음악 재생
-
-
-
-
-     
 
 @app.command(name='j')
 async def join(ctx):
@@ -331,12 +252,6 @@ async def stop(ctx):
     else:
         await ctx.send('X')
 
-
-
-
-
-
-    
 def new_func(app):
     app.run('NzA0OTE2NTk5NzQ3OTAzNTU5.GP8caw.4m6T532rAwauhErPvL1ZwCiQTdOexBWEmWmOM4') #봇 토큰
 

@@ -26,7 +26,7 @@ function resetnum()
 end
 
 function love.update(dt)
-    suit.layout:reset(100,100, 20,20)
+    suit.layout:reset(100, 100, 20, 20)
     button = suit.Button("Hit me", suit.layout:row(100,30), 350, 200, 30 ,70, score)
 
     if button.hit then
@@ -50,12 +50,12 @@ function love.update(dt)
             counter = counter + 0
         end
     end
-    
+
     suit.layout:push(suit.layout:row())
         suit.layout:padding(3)
         suit.Slider(slider, suit.layout:col(500, 20), 270, 200, 30 ,70)
         suit.Label(("%.02f"):format(slider.value), suit.layout:col(40))
-    
+
     if counter == 0 then
         gameover = "Your final Score : "..fscore.."\npress R to Restart"
         if love.keyboard.isDown("r") then
@@ -76,5 +76,4 @@ function love.draw()
     love.graphics.print("score", 10, 540, 0, 1)
     love.graphics.print(fscore, 21, 560, 0, 1)
     love.graphics.print("Last Score : "..myscore, 105, 40, 0, 1.5)
-    
 end

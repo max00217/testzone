@@ -1,3 +1,5 @@
+local suit = require("suit")
+
 function love.load()
     love.window.setTitle("오량인의 성능 안 좋은 Minesweeper")
     love.window.setMode(320, 352)
@@ -151,4 +153,5 @@ function love.draw()
             end
         end
     end
+    suit.draw()
 end

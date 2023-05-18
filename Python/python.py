@@ -1,7 +1,4 @@
-def fibonacci(n):
-    if n <= 1:
-        return n
-    else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
+a = type
+b = print
 
-print("Fibonacci(5):", fibonacci(40))
+b(a(b))

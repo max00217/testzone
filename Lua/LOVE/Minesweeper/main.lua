@@ -5,7 +5,7 @@ function love.load()
     love.window.setMode(320, 352)
     love.graphics.setBackgroundColor(0.5, 0.5, 0.5)
 
-    difficulty = 1.5
+    difficulty = 1
     gameState = {
         board = {},
         revealed = {},
@@ -38,28 +38,43 @@ function love.load()
         gameState.board[row][col] = "X"
     end
 end
-function love.mousepressed(x, y, button)
-    if gameState.gameOver then
-        return
+
+function love.keypressed(key)
+    if key == "r" then
+        love.load()
     end
-    local row, col = math.floor(y / cellsize) + 1, math.floor(x / cellsize) + 1
-    if button == 1 then
-        if gameState.board[row][col] ~= "F" or gameState.board[row][col] == "XF" or gameState.board[row][col] ~= "F" then
-            if not gameState.revealed[row][col] then
-                revealCell(row, col)
-                revealAdjacentCells(row, col)
+end
+
+function love.update(dt)
+    suit.layout:reset(230, 100, 20, 20)
+    restart = suit.Button("Restart", suit.layout:row(100,30), 320, 50, 30 ,70)
+    
+    if restart.hit then
+        love.load()
+    end
+end
+
+function love.mousepressed(x, y, button)
+    if x <= cellnum * cellsize and y <= cellnum * cellsize and not gameState.gameOver then
+        local row, col = math.floor(y / cellsize) + 1, math.floor(x / cellsize) + 1
+        if button == 1 then
+            if gameState.board[row][col] ~= "F" or gameState.board[row][col] == "XF" or gameState.board[row][col] ~= "F" then
+                if not gameState.revealed[row][col] then
+                    revealCell(row, col)
+                    revealAdjacentCells(row, col)
+                end
             end
-        end
-    elseif button == 2 then
-        if not gameState.revealed[row][col] then
-            if gameState.board[row][col] == "X" then
-                gameState.board[row][col] = "XF"
-            elseif gameState.board[row][col] == "XF" then
-                gameState.board[row][col] = "X"
-            elseif gameState.board[row][col] == "F" then
-                gameState.board[row][col] = " "
-            else
-                gameState.board[row][col] = "F"
+        elseif button == 2 then
+            if not gameState.revealed[row][col] then
+                if gameState.board[row][col] == "X" then
+                    gameState.board[row][col] = "XF"
+                elseif gameState.board[row][col] == "XF" then
+                    gameState.board[row][col] = "X"
+                elseif gameState.board[row][col] == "F" then
+                    gameState.board[row][col] = " "
+                else
+                    gameState.board[row][col] = "F"
+                end
             end
         end
     end
@@ -111,6 +126,7 @@ function revealAdjacentCells(row, col)
 end
 
 function love.draw()
+    suit.draw()
     for i=1,cellnum do
         for j=1,cellnum do
             love.graphics.setColor(1, 1, 1)
@@ -153,5 +169,4 @@ function love.draw()
             end
         end
     end
-    suit.draw()
 end

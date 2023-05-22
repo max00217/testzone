@@ -1,23 +1,30 @@
 local suit = require("suit")
+difficulty = 1
 
 function love.load()
     love.window.setTitle("오량인의 성능 안 좋은 Minesweeper")
-    love.window.setMode(320, 352)
+    love.window.setMode(320 * difficulty, 350 * difficulty+2)
     love.graphics.setBackgroundColor(0.5, 0.5, 0.5)
 
-    difficulty = 1
+    if difficulty == 1 then
+        Mine = 20
+    elseif difficulty == 1.5 then
+        Mine = 50
+    elseif difficulty == 2 then
+        Mine = 85
+    end
     gameState = {
         board = {},
         revealed = {},
         gameOver = false,
         win = false,
-        numMines = 10 * difficulty * 1.5,
+        numMines = Mine,
         numRevealed = 0,
     }
     cellnum, cellsize, txtsize = 10, 32, 1
     
     cellnum = cellnum * difficulty
-    cellsize = cellsize / difficulty
+    -- cellsize = cellsize / difficulty
     txtsize = txtsize / difficulty
 
 
@@ -46,10 +53,32 @@ function love.keypressed(key)
 end
 
 function love.update(dt)
-    suit.layout:reset(230, 100, 20, 20)
-    restart = suit.Button("Restart", suit.layout:row(100,30), 320, 50, 30 ,70)
-    
-    if restart.hit then
+    if difficulty == 1 then
+        buttony = 322
+    elseif difficulty == 1.5 then
+        buttony = 484
+    elseif difficulty == 2 then
+        buttony = 646
+    end
+
+    diff1 = suit.Button("1", 40, buttony, 50, 30 ,70)
+
+    diff2 = suit.Button("2", 110, buttony, 50, 30 ,70)
+
+    diff3 = suit.Button("3", 180, buttony, 50, 30 ,70)
+
+    restart = suit.Button("Restart", 250, buttony, 50, 30 ,70)
+
+    if diff1.hit then
+        difficulty = 1
+        love.load()
+    elseif diff2.hit then
+        difficulty = 1.5
+        love.load()
+    elseif diff3.hit then
+        difficulty = 2
+        love.load()
+    elseif restart.hit then
         love.load()
     end
 end
@@ -126,7 +155,6 @@ function revealAdjacentCells(row, col)
 end
 
 function love.draw()
-    suit.draw()
     for i=1,cellnum do
         for j=1,cellnum do
             love.graphics.setColor(1, 1, 1)
@@ -153,12 +181,20 @@ function love.draw()
             end
         end
     end
+    suit.draw()
     if gameState.gameOver then
+        if difficulty == 1 then
+            msgy = 320
+        elseif difficulty == 1.5 then
+            msgy = 480
+        elseif difficulty == 2 then
+            msgy = 640
+        end
         love.graphics.setColor(0, 0, 0)
         if gameState.win then
-            love.graphics.print("You win!", 128, 320)
+            love.graphics.print("You win!", 128, msgy)
         else
-            love.graphics.print("Game over", 128, 320)
+            love.graphics.print("Game over", 128, msgy)
             for i=1,cellnum do
                 for j=1,cellnum do
                     if gameState.board[i][j] == "X" then

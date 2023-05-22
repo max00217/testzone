@@ -15,7 +15,7 @@ function love.load()
     end
     gameState = {
         timer = 0,
-        timerStopped = false,
+        timerStopped = true,
         board = {},
         revealed = {},
         gameOver = false,
@@ -94,6 +94,7 @@ function love.mousepressed(x, y, button)
                 if not gameState.revealed[row][col] then
                     revealCell(row, col)
                     revealAdjacentCells(row, col)
+                    gameState.timerStopped = false
                 end
             end
         elseif button == 2 then

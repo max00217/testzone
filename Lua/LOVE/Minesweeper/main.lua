@@ -14,6 +14,8 @@ function love.load()
         Mine = 85
     end
     gameState = {
+        timer = 0,
+        timerStopped = false,
         board = {},
         revealed = {},
         gameOver = false,
@@ -21,12 +23,9 @@ function love.load()
         numMines = Mine,
         numRevealed = 0,
     }
-    cellnum, cellsize, txtsize = 10, 32, 1
-    
-    cellnum = cellnum * difficulty
-    -- cellsize = cellsize / difficulty
-    txtsize = txtsize / difficulty
+    cellnum, cellsize= 10, 32
 
+    cellnum = cellnum * difficulty
 
     for i=1, cellnum do
         gameState.board[i] = {}
@@ -53,6 +52,10 @@ function love.keypressed(key)
 end
 
 function love.update(dt)
+    if not gameState.gameOver and not gameState.timerStopped then
+        gameState.timer = gameState.timer + dt
+    end
+
     if difficulty == 1 then
         buttony = 322
     elseif difficulty == 1.5 then
@@ -61,13 +64,13 @@ function love.update(dt)
         buttony = 646
     end
 
-    diff1 = suit.Button("1", 40, buttony, 50, 30 ,70)
+    diff1 = suit.Button("1", 10, buttony, 50, 30 ,70)
 
-    diff2 = suit.Button("2", 110, buttony, 50, 30 ,70)
+    diff2 = suit.Button("2", 80, buttony, 50, 30 ,70)
 
-    diff3 = suit.Button("3", 180, buttony, 50, 30 ,70)
+    diff3 = suit.Button("3", 150, buttony, 50, 30 ,70)
 
-    restart = suit.Button("Restart", 250, buttony, 50, 30 ,70)
+    restart = suit.Button("Restart", 220, buttony, 50, 30 ,70)
 
     if diff1.hit then
         difficulty = 1
@@ -137,6 +140,7 @@ function revealCell(row, col)
         if gameState.numRevealed == cellnum^2 - gameState.numMines then
             gameState.gameOver = true
             gameState.win = true
+            gameState.timerStopped = true
         end
     end
 end
@@ -158,25 +162,25 @@ function love.draw()
     for i=1,cellnum do
         for j=1,cellnum do
             love.graphics.setColor(1, 1, 1)
-            love.graphics.rectangle("line", (j - 1) * cellsize, (i - 1) * cellsize, cellsize, cellsize, 0, txtsize)
+            love.graphics.rectangle("line", (j - 1) * cellsize, (i - 1) * cellsize, cellsize, cellsize, 0, 1)
             if gameState.revealed[i][j] then
                 if gameState.board[i][j] == "X" then
                     love.graphics.setColor(1, 0, 0)
-                    love.graphics.rectangle("fill", (j - 1) * cellsize, (i - 1) * cellsize, cellsize, cellsize, 0, txtsize)
+                    love.graphics.rectangle("fill", (j - 1) * cellsize, (i - 1) * cellsize, cellsize, cellsize, 0, 1)
                 else
                     love.graphics.setColor(0.5, 0.5, 0.5)
-                    love.graphics.rectangle("fill", (j - 1) * cellsize, (i - 1) * cellsize, cellsize, cellsize, 0, txtsize)
+                    love.graphics.rectangle("fill", (j - 1) * cellsize, (i - 1) * cellsize, cellsize, cellsize, 0, 1)
                     if gameState.board[i][j] ~= " " then
                         love.graphics.setColor(0, 0, 0)
-                        love.graphics.print(gameState.board[i][j], (j - 1) * cellsize + 8, (i - 1) * cellsize + 8, 0, txtsize)
+                        love.graphics.print(gameState.board[i][j], (j - 1) * cellsize + 8, (i - 1) * cellsize + 8, 0, 1)
                     end
                 end
             else
                 love.graphics.setColor(0.3, 0.3, 0.3)
-                love.graphics.rectangle("fill", (j - 1) * cellsize, (i - 1) * cellsize, cellsize, cellsize, 0, txtsize)
+                love.graphics.rectangle("fill", (j - 1) * cellsize, (i - 1) * cellsize, cellsize, cellsize, 0, 1)
                 if gameState.board[i][j] == "F" or gameState.board[i][j] == "XF" then
                     love.graphics.setColor(1, 0, 0)
-                    love.graphics.print("F", (j - 1) * cellsize + 8, (i - 1) * cellsize + 8, 0, txtsize)
+                    love.graphics.print("F", (j - 1) * cellsize + 8, (i - 1) * cellsize + 8, 0, 1)
                 end
             end
         end
@@ -204,5 +208,9 @@ function love.draw()
                 end
             end
         end
+        love.graphics.print(gameState.timer, 128, msgy + 20)
+    else
+        love.graphics.setColor(0, 0, 0)
+        love.graphics.print(string.format("%.2f", gameState.timer), 290, buttony + 15)
     end
 end

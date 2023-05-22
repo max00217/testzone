@@ -208,7 +208,7 @@ function love.draw()
                 end
             end
         end
-        love.graphics.print(gameState.timer, 128, msgy + 20)
+        love.graphics.print(string.format("%.2f", gameState.timer), 290, buttony + 15)
     else
         love.graphics.setColor(0, 0, 0)
         love.graphics.print(string.format("%.2f", gameState.timer), 290, buttony + 15)

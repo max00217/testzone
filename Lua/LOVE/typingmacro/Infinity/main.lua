@@ -46,9 +46,9 @@ function love.update(dt)
 
     if run_button.hit then
         runif = "현재 실행 중입니다. 기기를 만지지 마세요."
+        autogui.moveTo(tonumber(customX.text), tonumber(customY.text))
+        autogui.click()
         for i = 1, tonumber(repeat_time.text) do
-            autogui.moveTo(tonumber(customX.text), tonumber(customY.text))
-            autogui.click()
             autogui.write(customText.text)
             autogui.press("enter")
             autogui.sleep(tonumber(repeat_frequency.text))

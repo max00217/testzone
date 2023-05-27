@@ -73,6 +73,7 @@ function love.draw()
     love.graphics.print(coordString, (640 - font:getWidth(coordString)), 20)
     love.graphics.print(inputposition, 10, 460)
     love.graphics.print(runif, 10, 420)
+    love.graphics.print("해당 버전(Infinitytypingmacro)을 사용하며 생기는 불이익은 모두 사용자에게 있습니다.", 10, 400)
     
     -- 입력 상자와 Suit UI 요소 그리기
     suit.draw()

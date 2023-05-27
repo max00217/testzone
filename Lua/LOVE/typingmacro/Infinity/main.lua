@@ -5,9 +5,11 @@ function love.load()
     -- 해상도 설정
     love.window.setMode(640, 480)
     love.window.setTitle("오량인의 성능 안 좋은 디스코드 채팅 매크로")
+    
     -- 폰트 설정
     font = love.graphics.newFont("BMDOHYEON.ttf", 16)
     runif = "현재 실행 중이지 않습니다."
+
     -- 텍스트박스 변수 초기화
     customX = {text = "", cursor = 0}
     customY = {text = "", cursor = 0}

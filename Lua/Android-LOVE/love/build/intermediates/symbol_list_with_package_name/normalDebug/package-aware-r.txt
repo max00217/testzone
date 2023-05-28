@@ -1,3 +1,0 @@
-org.love2d.android
-bool embed
-bool selector_active

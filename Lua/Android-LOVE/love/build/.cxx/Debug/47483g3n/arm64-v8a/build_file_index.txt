@@ -1,2 +1,0 @@
-C:\Users\makpu\Downloads\proj\Projects\Lua\.modules\love-android\love\src\jni\Android.mk
-C:\Users\makpu\Downloads\proj\Projects\Lua\.modules\love-android\love\src\jni\Application.mk

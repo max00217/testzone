@@ -1,2 +1,0 @@
-int bool embed 0x0
-int bool selector_active 0x0

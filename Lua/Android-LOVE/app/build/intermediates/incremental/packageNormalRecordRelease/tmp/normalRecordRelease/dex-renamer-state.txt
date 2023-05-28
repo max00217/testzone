@@ -1,4 +1,0 @@
-#Sun May 28 20:31:12 KST 2023
-base.0=C\:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\app\\build\\intermediates\\dex\\normalRecordRelease\\minifyNormalRecordReleaseWithR8\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

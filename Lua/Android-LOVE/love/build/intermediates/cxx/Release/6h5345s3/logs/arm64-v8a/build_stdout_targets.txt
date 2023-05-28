@@ -1,0 +1,19 @@
+Android NDK: WARNING:C:/Users/makpu/Downloads/proj/Projects/Lua/Android-LOVE/love/src/jni/oboe/Android.mk:oboe: LOCAL_LDLIBS is always ignored for static libraries    
+[arm64-v8a] Compile++      : love <= Image.cpp
+[arm64-v8a] Compile++      : love <= vertex.cpp
+[arm64-v8a] Compile++      : love <= wrap_Canvas.cpp
+[arm64-v8a] Compile++      : love <= wrap_Font.cpp
+[arm64-v8a] Compile++      : love <= wrap_Graphics.cpp
+[arm64-v8a] Compile++      : love <= wrap_Image.cpp
+[arm64-v8a] Compile++      : love <= wrap_Mesh.cpp
+[arm64-v8a] Compile++      : love <= wrap_ParticleSystem.cpp
+[arm64-v8a] Compile++      : love <= wrap_Quad.cpp
+[arm64-v8a] Compile++      : love <= wrap_Shader.cpp
+[arm64-v8a] Compile++      : love <= wrap_SpriteBatch.cpp
+[arm64-v8a] Compile++      : love <= wrap_Text.cpp
+[arm64-v8a] Compile++      : love <= wrap_Texture.cpp
+[arm64-v8a] Compile++      : love <= wrap_Video.cpp
+[arm64-v8a] Compile++      : love <= Buffer.cpp
+[arm64-v8a] Compile++      : love <= Canvas.cpp
+[arm64-v8a] Compile++      : love <= FenceSync.cpp
+[arm64-v8a] Compile++      : love <= Graphics.cpp

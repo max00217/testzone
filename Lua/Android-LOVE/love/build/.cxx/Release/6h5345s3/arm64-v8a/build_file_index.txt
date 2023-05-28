@@ -1,0 +1,1 @@
+C:\Users\makpu\Downloads\proj\Projects\Lua\Android-LOVE\love\src\jni\Android.mk

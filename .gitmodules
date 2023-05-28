@@ -1,3 +1,6 @@
 [submodule "Lua/.modules/.modules/love-android"]
 	path = Lua/.modules/.modules/love-android
 	url = https://github.com/love2d/love-android.git
+[submodule "Lua/.modules/love-android"]
+	path = Lua/.modules/love-android
+	url = https://github.com/love2d/love-android.git

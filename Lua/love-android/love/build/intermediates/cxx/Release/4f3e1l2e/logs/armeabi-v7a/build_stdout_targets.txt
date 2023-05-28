@@ -1,3 +1,0 @@
-Android NDK: WARNING:C:/Users/makpu/Downloads/proj/Projects/Lua/love-android/love/src/jni/oboe/Android.mk:oboe: LOCAL_LDLIBS is always ignored for static libraries    
-make: Nothing to be done for 'mpg123'.
-make: Nothing to be done for 'openal'.

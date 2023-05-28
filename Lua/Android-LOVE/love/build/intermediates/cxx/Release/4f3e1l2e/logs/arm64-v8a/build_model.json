@@ -6,9 +6,9 @@
     "deprecated": false,
     "default": true
   },
-  "cxxBuildFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\build\\.cxx\\Release\\4f3e1l2e\\arm64-v8a",
-  "soFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\build\\intermediates\\cxx\\Release\\4f3e1l2e\\obj\\local\\arm64-v8a",
-  "soRepublishFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\build\\intermediates\\ndkBuild\\embedRelease\\obj\\local\\arm64-v8a",
+  "cxxBuildFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\build\\.cxx\\Release\\4f3e1l2e\\arm64-v8a",
+  "soFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\build\\intermediates\\cxx\\Release\\4f3e1l2e\\obj\\local\\arm64-v8a",
+  "soRepublishFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\build\\intermediates\\ndkBuild\\embedRelease\\obj\\local\\arm64-v8a",
   "abiPlatformVersion": 16,
   "variant": {
     "buildSystemArgumentList": [
@@ -26,13 +26,13 @@
     "implicitBuildTargetSet": [],
     "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
     "module": {
-      "cxxFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\build\\.cxx",
-      "intermediatesBaseFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\build\\intermediates",
-      "intermediatesFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\build\\intermediates\\cxx",
+      "cxxFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\build\\.cxx",
+      "intermediatesBaseFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\build\\intermediates",
+      "intermediatesFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\build\\intermediates\\cxx",
       "gradleModulePathName": ":love",
-      "moduleRootFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love",
-      "moduleBuildFile": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\build.gradle",
-      "makeFile": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\src\\jni\\Android.mk",
+      "moduleRootFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love",
+      "moduleBuildFile": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\build.gradle",
+      "makeFile": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\src\\jni\\Android.mk",
       "buildSystem": "NDK_BUILD",
       "ndkFolder": "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313",
       "ndkVersion": "23.2.8568313",
@@ -111,7 +111,7 @@
         "SYSTEM": {}
       },
       "project": {
-        "rootBuildGradleFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android",
+        "rootBuildGradleFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE",
         "sdkFolder": "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk",
         "isBuildOnlyTargetAbiEnabled": true,
         "isCmakeBuildCohabitationEnabled": false,
@@ -129,22 +129,22 @@
   "buildSettings": {
     "environmentVariables": []
   },
-  "prefabFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\build\\.cxx\\Release\\4f3e1l2e\\prefab\\arm64-v8a",
+  "prefabFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\build\\.cxx\\Release\\4f3e1l2e\\prefab\\arm64-v8a",
   "isActiveAbi": true,
   "fullConfigurationHash": "4f3e1l2e4a5vr4w6s6d1x3ml3h265g3k6t3m10446u6q6v2750226f2f2o4n2t",
   "fullConfigurationHashKey": "# Values used to calculate the hash in this folder name.\n# Should not depend on the absolute path of the project itself.\n#   - AGP: 8.0.0.\n#   - $NDK is the path to NDK 23.2.8568313.\n#   - $PROJECT is the path to the parent folder of the root Gradle build file.\n#   - $ABI is the ABI to be built with. The specific value doesn\u0027t contribute to the value of the hash.\n#   - $HASH is the hash value computed from this text.\nNDK_PROJECT_PATH\u003dnull\nAPP_BUILD_SCRIPT\u003d$PROJECT/love/src/jni/Android.mk\nNDK_APPLICATION_MK\u003d$PROJECT/love/src/jni/Application.mk\nAPP_ABI\u003d$ABI\nNDK_ALL_ABIS\u003d$ABI\nNDK_DEBUG\u003d0\nAPP_PLATFORM\u003dandroid-16\nNDK_OUT\u003d$PROJECT/love/build/intermediates/cxx/Release/$HASH/obj\nNDK_LIBS_OUT\u003d$PROJECT/love/build/intermediates/cxx/Release/$HASH/lib\n-j16",
   "configurationArguments": [
     "NDK_PROJECT_PATH\u003dnull",
-    "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\src\\jni\\Android.mk",
-    "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\src\\jni\\Application.mk",
+    "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\src\\jni\\Android.mk",
+    "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\src\\jni\\Application.mk",
     "APP_ABI\u003darm64-v8a",
     "NDK_ALL_ABIS\u003darm64-v8a",
     "NDK_DEBUG\u003d0",
     "APP_PLATFORM\u003dandroid-16",
-    "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\build\\intermediates\\cxx\\Release\\4f3e1l2e/obj",
-    "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\build\\intermediates\\cxx\\Release\\4f3e1l2e/lib",
+    "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\build\\intermediates\\cxx\\Release\\4f3e1l2e/obj",
+    "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\build\\intermediates\\cxx\\Release\\4f3e1l2e/lib",
     "-j16"
   ],
   "stlLibraryFile": "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\libc++_shared.so",
-  "intermediatesParentFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\.modules\\love-android\\love\\build\\intermediates\\cxx\\Release\\4f3e1l2e"
+  "intermediatesParentFolder": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\Android-LOVE\\love\\build\\intermediates\\cxx\\Release\\4f3e1l2e"
 }

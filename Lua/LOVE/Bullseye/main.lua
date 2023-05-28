@@ -3,6 +3,7 @@ local suit = require("suit")
 function love.load()
     love.window.setMode(400, 600)
     love.window.setTitle("오량인의 성능 안 좋은 Bullseye ver. Lua")
+    font = love.graphics.newFont("BMDOHYEON.ttf", 13.5)
     myscore = ""
 end
 
@@ -67,6 +68,7 @@ end
 
 function love.draw()
     suit.draw()
+    love.graphics.setFont(font)
     love.graphics.print("PUT THE BULLSEYE AS CLOSE YOU CAN", 80, 200, 0, 1)
     love.graphics.print("IT WOULD NOT BE EASY", 120, 220, 0, 1)
     love.graphics.print("100", 320, 276, 0, 1)

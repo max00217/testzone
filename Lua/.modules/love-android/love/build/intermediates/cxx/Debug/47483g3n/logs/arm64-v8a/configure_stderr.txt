@@ -1,0 +1,1 @@
+C:\Users\makpu\Downloads\proj\Projects\Lua\.modules\love-android\love\src\jni\Android.mk:7: *** Missing LOVE. Make sure to initialize the submodule correctly!.  Stop.

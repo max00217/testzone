@@ -1,0 +1,2 @@
+org.love2d.android
+bool embed

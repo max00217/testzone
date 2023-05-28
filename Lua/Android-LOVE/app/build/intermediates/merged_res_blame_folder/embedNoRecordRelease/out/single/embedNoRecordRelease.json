@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "org.love2d.android.executable.app-merged_res-20:/drawable-xxxhdpi_love.png.flat",
+        "source": "org.love2d.android.executable.app-main-24:/drawable-xxxhdpi/love.png"
+    },
+    {
+        "merged": "org.love2d.android.executable.app-merged_res-20:/drawable-xhdpi_love.png.flat",
+        "source": "org.love2d.android.executable.app-main-24:/drawable-xhdpi/love.png"
+    },
+    {
+        "merged": "org.love2d.android.executable.app-merged_res-20:/drawable-mdpi_love.png.flat",
+        "source": "org.love2d.android.executable.app-main-24:/drawable-mdpi/love.png"
+    },
+    {
+        "merged": "org.love2d.android.executable.app-merged_res-20:/drawable-xxhdpi_love.png.flat",
+        "source": "org.love2d.android.executable.app-main-24:/drawable-xxhdpi/love.png"
+    },
+    {
+        "merged": "org.love2d.android.executable.app-merged_res-20:/drawable-hdpi_love.png.flat",
+        "source": "org.love2d.android.executable.app-main-24:/drawable-hdpi/love.png"
+    }
+]

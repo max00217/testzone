@@ -1,0 +1,235 @@
+org.libsdl.app.DummyEdit:
+    android.view.inputmethod.InputConnection ic
+    public void <init>(android.content.Context)
+    public boolean onCheckIsTextEditor()
+    public android.view.inputmethod.InputConnection onCreateInputConnection(android.view.inputmethod.EditorInfo)
+    public boolean onKey(android.view.View,int,android.view.KeyEvent)
+    public boolean onKeyPreIme(int,android.view.KeyEvent)
+org.libsdl.app.HIDDevice:
+    public abstract void close()
+    public abstract boolean getFeatureReport(byte[])
+    public abstract java.lang.String getManufacturerName()
+    public abstract int getProductId()
+    public abstract java.lang.String getProductName()
+    public abstract java.lang.String getSerialNumber()
+    public abstract int getVendorId()
+    public abstract int getVersion()
+    public abstract int sendFeatureReport(byte[])
+    public abstract int sendOutputReport(byte[])
+org.libsdl.app.HIDDeviceBLESteamController$1
+org.libsdl.app.HIDDeviceBLESteamController$GattOperation:
+    private void <init>(android.bluetooth.BluetoothGatt,org.libsdl.app.HIDDeviceBLESteamController$GattOperation$Operation,java.util.UUID,byte[])
+    public static org.libsdl.app.HIDDeviceBLESteamController$GattOperation readCharacteristic(android.bluetooth.BluetoothGatt,java.util.UUID)
+    public static org.libsdl.app.HIDDeviceBLESteamController$GattOperation writeCharacteristic(android.bluetooth.BluetoothGatt,java.util.UUID,byte[])
+org.libsdl.app.HIDDeviceBLESteamController:
+    private static final int CHROMEBOOK_CONNECTION_CHECK_INTERVAL
+    private static final java.lang.String TAG
+    private static final int TRANSPORT_AUTO
+    private static final int TRANSPORT_BREDR
+    private static final int TRANSPORT_LE
+    protected void checkConnectionForChromebookIssue()
+    public boolean getFeatureReport(byte[])
+    public android.bluetooth.BluetoothGatt getGatt()
+    public void readCharacteristic(java.util.UUID)
+    public int sendFeatureReport(byte[])
+    public int sendOutputReport(byte[])
+    public void writeCharacteristic(java.util.UUID,byte[])
+org.libsdl.app.HIDDeviceManager$3
+org.libsdl.app.HIDDeviceManager:
+    private static final java.lang.String ACTION_USB_PERMISSION
+    private static final java.lang.String TAG
+    private android.bluetooth.BluetoothManager mBluetoothManager
+    private android.os.Handler mHandler
+    private java.util.List mLastBluetoothDevices
+    native void HIDDeviceOpenPending(int)
+    public void chromebookConnectionHandler()
+    public void closeDevice(int)
+    private org.libsdl.app.HIDDevice getDevice(int)
+    public boolean getFeatureReport(int,byte[])
+    public boolean initialize(boolean,boolean)
+    private void initializeBluetooth()
+    private void initializeUSB()
+    public boolean openDevice(int)
+    public int sendFeatureReport(int,byte[])
+    public int sendOutputReport(int,byte[])
+org.libsdl.app.HIDDeviceUSB:
+    private static final java.lang.String TAG
+    public boolean getFeatureReport(byte[])
+    public int sendFeatureReport(byte[])
+    public int sendOutputReport(byte[])
+org.libsdl.app.SDL:
+    public void <init>()
+org.libsdl.app.SDLActivity$1OneShotTask
+org.libsdl.app.SDLActivity$2
+org.libsdl.app.SDLActivity$3
+org.libsdl.app.SDLActivity$4
+org.libsdl.app.SDLActivity$5
+org.libsdl.app.SDLActivity$6
+org.libsdl.app.SDLActivity$7
+org.libsdl.app.SDLActivity$SDLCommandHandler
+org.libsdl.app.SDLActivity$ShowTextInputTask
+org.libsdl.app.SDLActivity:
+    static final int COMMAND_CHANGE_TITLE
+    static final int COMMAND_CHANGE_WINDOW_STYLE
+    static final int COMMAND_SET_KEEP_SCREEN_ON
+    static final int COMMAND_TEXTEDIT_HIDE
+    protected static final int COMMAND_USER
+    private static final int SDL_MAJOR_VERSION
+    private static final int SDL_MICRO_VERSION
+    private static final int SDL_MINOR_VERSION
+    protected static final int SDL_ORIENTATION_LANDSCAPE
+    protected static final int SDL_ORIENTATION_LANDSCAPE_FLIPPED
+    protected static final int SDL_ORIENTATION_PORTRAIT
+    protected static final int SDL_ORIENTATION_PORTRAIT_FLIPPED
+    protected static final int SDL_ORIENTATION_UNKNOWN
+    private static final int SDL_SYSTEM_CURSOR_ARROW
+    private static final int SDL_SYSTEM_CURSOR_CROSSHAIR
+    private static final int SDL_SYSTEM_CURSOR_HAND
+    private static final int SDL_SYSTEM_CURSOR_IBEAM
+    private static final int SDL_SYSTEM_CURSOR_NO
+    private static final int SDL_SYSTEM_CURSOR_SIZEALL
+    private static final int SDL_SYSTEM_CURSOR_SIZENESW
+    private static final int SDL_SYSTEM_CURSOR_SIZENS
+    private static final int SDL_SYSTEM_CURSOR_SIZENWSE
+    private static final int SDL_SYSTEM_CURSOR_SIZEWE
+    private static final int SDL_SYSTEM_CURSOR_WAIT
+    private static final int SDL_SYSTEM_CURSOR_WAITARROW
+    private static final java.lang.String TAG
+    protected static boolean mScreenKeyboardShown
+    protected final int[] messageboxSelection
+    public void <init>()
+    public static java.lang.String clipboardGetText()
+    public static boolean clipboardHasText()
+    public static void clipboardSetText(java.lang.String)
+    public static int createCustomCursor(int[],int,int,int,int)
+    public static void destroyCustomCursor(int)
+    public static double getDiagonal()
+    public static android.util.DisplayMetrics getDisplayDPI()
+    public static boolean getManifestEnvironmentVariables()
+    public static android.view.Surface getNativeSurface()
+    public static void initTouch()
+    public static boolean isAndroidTV()
+    public static boolean isChromebook()
+    public static boolean isScreenKeyboardShown()
+    public static boolean isTablet()
+    public static void manualBackButton()
+    protected void messageboxCreateAndShow(android.os.Bundle)
+    public int messageboxShowMessageBox(int,java.lang.String,java.lang.String,int[],int[],java.lang.String[],int[])
+    public static void minimizeWindow()
+    public static native void nativeAddTouch(int,java.lang.String)
+    public static native java.lang.String nativeGetHint(java.lang.String)
+    public static native void nativeSetenv(java.lang.String,java.lang.String)
+    public static native void onNativeKeyboardFocusLost()
+    public static native boolean onNativeSoftReturnKey()
+    protected boolean onUnhandledMessage(int,java.lang.Object)
+    public void pressBackButton()
+    public static void requestPermission(java.lang.String,int)
+    public static boolean sendMessage(int,int)
+    public static boolean setActivityTitle(java.lang.String)
+    public static boolean setCustomCursor(int)
+    public static void setOrientation(int,int,boolean,java.lang.String)
+    public void setOrientationBis(int,int,boolean,java.lang.String)
+    public static boolean setRelativeMouseEnabled(boolean)
+    public static boolean setSystemCursor(int)
+    public static boolean shouldMinimizeOnFocusLoss()
+    public static boolean showTextInput(int,int,int,int)
+    public static int showToast(java.lang.String,int,int,int,int)
+    public void superOnBackPressed()
+    public static boolean supportsRelativeMouse()
+org.libsdl.app.SDLAudioManager:
+    protected static final java.lang.String TAG
+    public void <init>()
+    public static void audioClose()
+    public static int[] audioOpen(int,int,int,int)
+    public static void audioSetThreadPriority(boolean,int)
+    public static void audioWriteByteBuffer(byte[])
+    public static void audioWriteFloatBuffer(float[])
+    public static void audioWriteShortBuffer(short[])
+    public static void captureClose()
+    public static int[] captureOpen(int,int,int,int)
+    public static int captureReadByteBuffer(byte[],boolean)
+    public static int captureReadFloatBuffer(float[],boolean)
+    public static int captureReadShortBuffer(short[],boolean)
+    protected static java.lang.String getAudioFormatString(int)
+    protected static int[] open(boolean,int,int,int,int)
+org.libsdl.app.SDLClipboardHandler:
+    public java.lang.String clipboardGetText()
+    public boolean clipboardHasText()
+    public void clipboardSetText(java.lang.String)
+org.libsdl.app.SDLControllerManager:
+    private static final java.lang.String TAG
+    public void <init>()
+    public static void hapticRun(int,float,int)
+    public static void hapticStop(int)
+    public static native int nativeAddHaptic(int,java.lang.String)
+    public static native int nativeAddJoystick(int,java.lang.String,java.lang.String,int,int,boolean,int,int,int,int)
+    public static native int nativeRemoveHaptic(int)
+    public static native int nativeRemoveJoystick(int)
+    public static void pollHapticDevices()
+    public static void pollInputDevices()
+org.libsdl.app.SDLGenericMotionListener_API12:
+    public boolean setRelativeMouseEnabled(boolean)
+    public boolean supportsRelativeMouse()
+org.libsdl.app.SDLGenericMotionListener_API24:
+    public boolean setRelativeMouseEnabled(boolean)
+    public boolean supportsRelativeMouse()
+org.libsdl.app.SDLGenericMotionListener_API26:
+    public boolean setRelativeMouseEnabled(boolean)
+    public boolean supportsRelativeMouse()
+org.libsdl.app.SDLHapticHandler$SDLHaptic
+org.libsdl.app.SDLHapticHandler:
+    protected org.libsdl.app.SDLHapticHandler$SDLHaptic getHaptic(int)
+    public void pollHapticDevices()
+    public void run(int,float,int)
+    public void stop(int)
+org.libsdl.app.SDLHapticHandler_API26:
+    public void run(int,float,int)
+org.libsdl.app.SDLInputConnection:
+    protected java.lang.String mCommittedText
+    protected android.widget.EditText mEditText
+    public void <init>(android.view.View,boolean)
+    public boolean commitText(java.lang.CharSequence,int)
+    public boolean deleteSurroundingText(int,int)
+    public android.text.Editable getEditable()
+    public static native void nativeGenerateScancodeForUnichar(char)
+    public boolean sendKeyEvent(android.view.KeyEvent)
+    public boolean setComposingText(java.lang.CharSequence,int)
+    protected void updateText()
+org.libsdl.app.SDLJoystickHandler:
+    public void pollInputDevices()
+org.libsdl.app.SDLJoystickHandler_API16$RangeComparator
+org.libsdl.app.SDLJoystickHandler_API16$SDLJoystick:
+    public java.lang.String desc
+    public java.lang.String name
+    void <init>()
+org.libsdl.app.SDLJoystickHandler_API16:
+    public int getButtonMask(android.view.InputDevice)
+    public java.lang.String getJoystickDescriptor(android.view.InputDevice)
+    public int getProductId(android.view.InputDevice)
+    public int getVendorId(android.view.InputDevice)
+    public void pollInputDevices()
+org.libsdl.app.SDLJoystickHandler_API19:
+    public int getButtonMask(android.view.InputDevice)
+    public int getProductId(android.view.InputDevice)
+    public int getVendorId(android.view.InputDevice)
+org.love2d.android.BuildConfig
+org.love2d.android.DownloadActivity$1
+org.love2d.android.DownloadActivity
+org.love2d.android.DownloadService$1
+org.love2d.android.DownloadService
+org.love2d.android.GameActivity:
+    public static final int EXTERNAL_STORAGE_REQUEST_CODE
+    public static final int RECORD_AUDIO_REQUEST_CODE
+    public void <init>()
+    public static android.util.DisplayMetrics getMetrics()
+org.love2d.android.SelectorActivity
+org.libsdl.app.DummyEdit
+org.libsdl.app.SDLActivity:
+    protected static org.libsdl.app.DummyEdit mTextEdit
+org.libsdl.app.SDLControllerManager:
+    public static native void onNativeHat(int,int,int,int)
+    public static native void onNativeJoy(int,int,float)
+org.libsdl.app.SDLJoystickHandler_API16$SDLJoystick:
+    public java.util.ArrayList axes
+    public int device_id
+    public java.util.ArrayList hats

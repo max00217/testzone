@@ -1,0 +1,305 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.love2d.android"
+4    android:versionCode="31"
+5    android:versionName="11.5" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission
+11-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:4:3-105
+12        android:name="android.permission.READ_EXTERNAL_STORAGE"
+12-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:4:20-75
+13        android:maxSdkVersion="28" />
+13-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:4:76-102
+14    <uses-permission
+14-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:7:3-106
+15        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+15-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:7:20-76
+16        android:maxSdkVersion="28" />
+16-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:7:77-103
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:3:3-65
+17-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:3:20-62
+18    <uses-permission android:name="android.permission.VIBRATE" />
+18-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:4:3-64
+18-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:4:20-61
+19    <uses-permission android:name="android.permission.BLUETOOTH" />
+19-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:5:3-66
+19-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:5:20-63
+20    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- OpenGL ES 2.0 -->
+20-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:6:3-69
+20-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:6:20-66
+21    <uses-feature android:glEsVersion="0x00020000" /> <!-- Touchscreen support -->
+21-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:10:3-52
+21-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:10:17-49
+22    <uses-feature
+22-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:12:3-88
+23        android:name="android.hardware.touchscreen"
+23-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:12:17-60
+24        android:required="false" /> <!-- Game controller support -->
+24-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:12:61-85
+25    <uses-feature
+25-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:14:3-86
+26        android:name="android.hardware.bluetooth"
+26-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:14:17-58
+27        android:required="false" />
+27-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:14:59-83
+28    <uses-feature
+28-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:15:3-84
+29        android:name="android.hardware.gamepad"
+29-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:15:17-56
+30        android:required="false" />
+30-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:15:57-81
+31    <uses-feature
+31-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:16:3-85
+32        android:name="android.hardware.usb.host"
+32-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:16:17-57
+33        android:required="false" /> <!-- External mouse input events -->
+33-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:16:58-82
+34    <uses-feature
+34-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:18:3-84
+35        android:name="android.hardware.type.pc"
+35-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:18:17-56
+36        android:required="false" /> <!-- Low latency audio -->
+36-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:18:57-81
+37    <uses-feature
+37-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:20:3-94
+38        android:name="android.hardware.audio.low_latency"
+38-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:20:17-66
+39        android:required="false" />
+39-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:20:67-91
+40    <uses-feature
+40-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:21:3-86
+41        android:name="android.hardware.audio.pro"
+41-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:21:17-58
+42        android:required="false" />
+42-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:21:59-83
+43
+44    <permission
+44-->[androidx.core:core:1.9.0] C:\Users\makpu\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+45        android:name="org.love2d.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+45-->[androidx.core:core:1.9.0] C:\Users\makpu\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+46        android:protectionLevel="signature" />
+46-->[androidx.core:core:1.9.0] C:\Users\makpu\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+47
+48    <uses-permission android:name="org.love2d.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+48-->[androidx.core:core:1.9.0] C:\Users\makpu\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+48-->[androidx.core:core:1.9.0] C:\Users\makpu\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+49
+50    <application
+51        android:allowBackup="true"
+51-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:24:7-33
+52        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+52-->[androidx.core:core:1.9.0] C:\Users\makpu\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+53        android:icon="@drawable/love"
+53-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:25:7-36
+54        android:label="LÖVE for Android"
+54-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:26:7-30
+55        android:usesCleartextTraffic="true" >
+55-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:27:7-42
+56        <service android:name="org.love2d.android.DownloadService" />
+56-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:8:5-66
+56-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:8:14-63
+57
+58        <activity
+59            android:name="org.love2d.android.GameActivity"
+59-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:10:9-55
+60            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboard|keyboardHidden|navigation"
+60-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:31:9-122
+61            android:exported="true"
+61-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:30:9-32
+62            android:label="LÖVE for Android"
+62-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:32:9-32
+63            android:launchMode="singleTask"
+63-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:33:9-40
+64            android:resizeableActivity="false"
+64-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:35:9-43
+65            android:screenOrientation="landscape"
+65-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:34:9-51
+66            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+66-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:36:9-67
+67            <intent-filter>
+67-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:12:7-20:23
+68                <action android:name="android.intent.action.VIEW" />
+68-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:13:9-61
+68-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:13:17-58
+69
+70                <category android:name="android.intent.category.DEFAULT" />
+70-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:14:9-68
+70-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:14:19-65
+71                <category android:name="android.intent.category.BROWSABLE" />
+71-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:15:9-70
+71-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:15:19-67
+72
+73                <data android:scheme="file" />
+73-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:9-39
+73-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:15-36
+74                <data android:mimeType="*/*" />
+74-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:9-39
+74-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:17:15-37
+75                <data android:pathPattern=".*\\.love" />
+75-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:9-39
+75-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:18:15-46
+76                <data android:host="*" />
+76-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:9-39
+76-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:19:15-31
+77            </intent-filter>
+78            <intent-filter>
+78-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:21:7-27:23
+79                <action android:name="android.intent.action.VIEW" />
+79-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:13:9-61
+79-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:13:17-58
+80
+81                <category android:name="android.intent.category.DEFAULT" />
+81-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:14:9-68
+81-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:14:19-65
+82                <category android:name="android.intent.category.BROWSABLE" />
+82-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:15:9-70
+82-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:15:19-67
+83
+84                <data android:scheme="content" />
+84-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:9-39
+84-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:15-36
+85                <data android:mimeType="application/x-love-game" />
+85-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:9-39
+85-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:17:15-37
+86            </intent-filter>
+87            <intent-filter>
+87-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:28:7-34:23
+88                <action android:name="android.intent.action.VIEW" />
+88-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:13:9-61
+88-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:13:17-58
+89
+90                <category android:name="android.intent.category.DEFAULT" />
+90-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:14:9-68
+90-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:14:19-65
+91                <category android:name="android.intent.category.BROWSABLE" />
+91-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:15:9-70
+91-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:15:19-67
+92
+93                <data android:scheme="content" />
+93-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:9-39
+93-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:15-36
+94                <data android:mimeType="application/octet-stream" />
+94-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:9-39
+94-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:17:15-37
+95            </intent-filter>
+96            <intent-filter>
+96-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:61:7-65:23
+97                <action android:name="android.intent.action.MAIN" />
+97-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:62:9-61
+97-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:62:17-58
+98
+99                <category android:name="android.intent.category.LAUNCHER" />
+99-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:63:9-69
+99-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:63:19-66
+100                <category android:name="tv.ouya.intent.category.GAME" />
+100-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:64:9-65
+100-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:64:19-62
+101            </intent-filter>
+102            <intent-filter>
+102-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:42:7-44:23
+103                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+103-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:43:9-82
+103-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:43:17-79
+104            </intent-filter>
+105        </activity>
+106        <activity
+106-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:36:5-54:16
+107            android:name="org.love2d.android.DownloadActivity"
+107-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:37:9-59
+108            android:exported="true"
+108-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:38:9-32
+109            android:noHistory="true"
+109-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:39:9-33
+110            android:theme="@android:style/Theme.NoTitleBar" >
+110-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:40:9-56
+111            <intent-filter>
+111-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:41:7-53:23
+112                <action android:name="android.intent.action.VIEW" />
+112-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:13:9-61
+112-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:13:17-58
+113
+114                <category android:name="android.intent.category.DEFAULT" />
+114-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:14:9-68
+114-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:14:19-65
+115                <category android:name="android.intent.category.BROWSABLE" />
+115-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:15:9-70
+115-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:15:19-67
+116
+117                <data
+117-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:9-39
+118                    android:host="*"
+118-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:19:15-31
+119                    android:mimeType="*/*"
+119-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:17:15-37
+120                    android:pathPattern=".*\\.love"
+120-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:18:15-46
+121                    android:scheme="http" />
+121-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:15-36
+122                <data
+122-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:9-39
+123                    android:host="*"
+123-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:19:15-31
+124                    android:mimeType="*/*"
+124-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:17:15-37
+125                    android:pathPattern=".*\\.love"
+125-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:18:15-46
+126                    android:scheme="https" />
+126-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:16:15-36
+127            </intent-filter>
+128        </activity>
+129        <activity
+129-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:55:5-66:16
+130            android:name="org.love2d.android.SelectorActivity"
+130-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:56:9-59
+131            android:enabled="@bool/selector_active"
+131-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:59:9-48
+132            android:exported="true"
+132-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:58:9-32
+133            android:label="LÖVE Loader"
+133-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:57:9-36
+134            android:theme="@style/Theme.AppCompat.NoActionBar" >
+134-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:60:9-59
+135            <intent-filter>
+135-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:61:7-65:23
+136                <action android:name="android.intent.action.MAIN" />
+136-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:62:9-61
+136-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:62:17-58
+137
+138                <category android:name="android.intent.category.LAUNCHER" />
+138-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:63:9-69
+138-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:63:19-66
+139                <category android:name="tv.ouya.intent.category.GAME" />
+139-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:64:9-65
+139-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\normal\AndroidManifest.xml:64:19-62
+140            </intent-filter>
+141        </activity>
+142
+143        <provider
+143-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+144            android:name="androidx.startup.InitializationProvider"
+144-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+145            android:authorities="org.love2d.android.androidx-startup"
+145-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+146            android:exported="false" >
+146-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+147            <meta-data
+147-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+148                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+148-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+149                android:value="androidx.startup" />
+149-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+150            <meta-data
+150-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\makpu\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+151                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+151-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\makpu\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+152                android:value="androidx.startup" />
+152-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\makpu\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+153        </provider>
+154    </application>
+155
+156</manifest>

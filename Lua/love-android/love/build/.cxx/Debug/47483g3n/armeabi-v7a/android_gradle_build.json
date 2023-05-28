@@ -1,0 +1,269 @@
+{
+  "buildFiles": [
+    "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+    "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+      "NDK_PROJECT_PATH\u003dnull",
+      "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+      "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+      "APP_ABI\u003darmeabi-v7a",
+      "NDK_ALL_ABIS\u003darmeabi-v7a",
+      "NDK_DEBUG\u003d1",
+      "APP_PLATFORM\u003dandroid-16",
+      "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+      "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+    "NDK_PROJECT_PATH\u003dnull",
+    "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+    "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+    "APP_ABI\u003darmeabi-v7a",
+    "NDK_ALL_ABIS\u003darmeabi-v7a",
+    "NDK_DEBUG\u003d1",
+    "APP_PLATFORM\u003dandroid-16",
+    "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+    "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+    "-j16",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "vorbis-embedDebug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+        "-j16",
+        "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj/local/armeabi-v7a/libvorbis.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "vorbis",
+      "output": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n\\obj\\local\\armeabi-v7a\\libvorbis.a"
+    },
+    "cpufeatures-embedDebug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+        "-j16",
+        "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj/local/armeabi-v7a/libcpufeatures.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "cpufeatures",
+      "output": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n\\obj\\local\\armeabi-v7a\\libcpufeatures.a"
+    },
+    "openal-embedDebug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+        "-j16",
+        "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj/local/armeabi-v7a/libopenal.so"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "openal",
+      "output": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n\\obj\\local\\armeabi-v7a\\libopenal.so"
+    },
+    "theora-embedDebug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+        "-j16",
+        "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj/local/armeabi-v7a/libtheora.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "theora",
+      "output": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n\\obj\\local\\armeabi-v7a\\libtheora.a"
+    },
+    "SDL2-embedDebug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+        "-j16",
+        "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj/local/armeabi-v7a/libSDL2.so"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "SDL2",
+      "output": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n\\obj\\local\\armeabi-v7a\\libSDL2.so"
+    },
+    "freetype-embedDebug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+        "-j16",
+        "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj/local/armeabi-v7a/libfreetype.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "freetype",
+      "output": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n\\obj\\local\\armeabi-v7a\\libfreetype.a"
+    },
+    "mpg123-embedDebug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+        "-j16",
+        "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj/local/armeabi-v7a/libmpg123.so"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "mpg123",
+      "output": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n\\obj\\local\\armeabi-v7a\\libmpg123.so"
+    },
+    "oboe-embedDebug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+        "-j16",
+        "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj/local/armeabi-v7a/liboboe.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "oboe",
+      "output": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n\\obj\\local\\armeabi-v7a\\liboboe.a"
+    },
+    "love-embedDebug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+        "-j16",
+        "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj/local/armeabi-v7a/liblove.so"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "love",
+      "output": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n\\obj\\local\\armeabi-v7a\\liblove.so"
+    },
+    "modplug-embedDebug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+        "-j16",
+        "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj/local/armeabi-v7a/libmodplug.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "modplug",
+      "output": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n\\obj\\local\\armeabi-v7a\\libmodplug.a"
+    },
+    "ogg-embedDebug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\src\\jni\\Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/lib",
+        "-j16",
+        "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n/obj/local/armeabi-v7a/libogg.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "ogg",
+      "output": "C:\\Users\\makpu\\Downloads\\proj\\Projects\\Lua\\love-android\\love\\build\\intermediates\\cxx\\Debug\\47483g3n\\obj\\local\\armeabi-v7a\\libogg.a"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi-v7a": {
+      "cCompilerExecutable": "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\build\\..\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "C:\\Users\\makpu\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\build\\..\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

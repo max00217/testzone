@@ -1,0 +1,133 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.love2d.android"
+4    android:versionCode="31"
+5    android:versionName="11.5" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:3:3-65
+11-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:3:20-62
+12    <uses-permission android:name="android.permission.VIBRATE" />
+12-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:4:3-64
+12-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:4:20-61
+13    <uses-permission android:name="android.permission.BLUETOOTH" />
+13-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:5:3-66
+13-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:5:20-63
+14    <uses-permission
+14-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:7:3-106
+15        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+15-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:7:20-76
+16        android:maxSdkVersion="18" /> <!-- OpenGL ES 2.0 -->
+16-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:7:77-103
+17    <uses-feature android:glEsVersion="0x00020000" /> <!-- Touchscreen support -->
+17-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:10:3-52
+17-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:10:17-49
+18    <uses-feature
+18-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:12:3-88
+19        android:name="android.hardware.touchscreen"
+19-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:12:17-60
+20        android:required="false" /> <!-- Game controller support -->
+20-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:12:61-85
+21    <uses-feature
+21-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:14:3-86
+22        android:name="android.hardware.bluetooth"
+22-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:14:17-58
+23        android:required="false" />
+23-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:14:59-83
+24    <uses-feature
+24-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:15:3-84
+25        android:name="android.hardware.gamepad"
+25-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:15:17-56
+26        android:required="false" />
+26-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:15:57-81
+27    <uses-feature
+27-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:16:3-85
+28        android:name="android.hardware.usb.host"
+28-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:16:17-57
+29        android:required="false" /> <!-- External mouse input events -->
+29-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:16:58-82
+30    <uses-feature
+30-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:18:3-84
+31        android:name="android.hardware.type.pc"
+31-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:18:17-56
+32        android:required="false" /> <!-- Low latency audio -->
+32-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:18:57-81
+33    <uses-feature
+33-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:20:3-94
+34        android:name="android.hardware.audio.low_latency"
+34-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:20:17-66
+35        android:required="false" />
+35-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:20:67-91
+36    <uses-feature
+36-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:21:3-86
+37        android:name="android.hardware.audio.pro"
+37-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:21:17-58
+38        android:required="false" />
+38-->C:\Users\makpu\Downloads\proj\Projects\Lua\love-android\app\src\main\AndroidManifest.xml:21:59-83
+39
+40    <permission
+40-->[androidx.core:core:1.9.0] C:\Users\makpu\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+41        android:name="org.love2d.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+41-->[androidx.core:core:1.9.0] C:\Users\makpu\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+42        android:protectionLevel="signature" />
+42-->[androidx.core:core:1.9.0] C:\Users\makpu\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+43
+44    <uses-permission android:name="org.love2d.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+44-->[androidx.core:core:1.9.0] C:\Users\makpu\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+44-->[androidx.core:core:1.9.0] C:\Users\makpu\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+45
+46    <application
+47        android:allowBackup="true"
+48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+48-->[androidx.core:core:1.9.0] C:\Users\makpu\.gradle\caches\transforms-3\8c25e88eb4ea76e8f3d0900731d8ae12\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+49        android:icon="@drawable/love"
+50        android:label="LÖVE for Android"
+51        android:usesCleartextTraffic="true" >
+52        <activity
+53            android:name="org.love2d.android.GameActivity"
+54            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboard|keyboardHidden|navigation"
+55            android:exported="true"
+56            android:label="LÖVE for Android"
+57            android:launchMode="singleTask"
+58            android:resizeableActivity="false"
+59            android:screenOrientation="landscape"
+60            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+61            <intent-filter>
+62                <action android:name="android.intent.action.MAIN" />
+63
+64                <category android:name="android.intent.category.LAUNCHER" />
+65                <category android:name="tv.ouya.intent.category.GAME" />
+66            </intent-filter>
+67            <intent-filter>
+68                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+69            </intent-filter>
+70        </activity>
+71
+72        <provider
+72-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+73            android:name="androidx.startup.InitializationProvider"
+73-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+74            android:authorities="org.love2d.android.androidx-startup"
+74-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+75            android:exported="false" >
+75-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+76            <meta-data
+76-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+77                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+77-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+78                android:value="androidx.startup" />
+78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\makpu\.gradle\caches\transforms-3\0fef484d2d7d3612c69865f977f8c08f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+79            <meta-data
+79-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\makpu\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+80                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+80-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\makpu\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+81                android:value="androidx.startup" />
+81-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\makpu\.gradle\caches\transforms-3\ae3e8265de2d7f874c642be745cd48da\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+82        </provider>
+83    </application>
+84
+85</manifest>

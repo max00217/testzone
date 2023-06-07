@@ -1,10 +1,7 @@
-cnt = 0
-
 for i = 1, 100 do
-    q = math.random(1, 10)
-    print(q)
-    if q == 5 then
-        cnt = cnt + 1
+    if i % 10 == 0 then
+        print("this is apple")
+    else
+        print(i)
     end
 end
-print("cnt: "..cnt)

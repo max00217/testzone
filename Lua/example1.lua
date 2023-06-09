@@ -53,4 +53,3 @@ local s3 = series.create(g, xaxis2, yaxis1, {
 local l = legend.create(g, {position = "south"})
 
 g:plot("boxplot.pdf", 80, 60, "fonts/cmr10.ttf")
-

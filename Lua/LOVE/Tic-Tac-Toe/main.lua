@@ -6,6 +6,7 @@ local WhoWin = ""
 
 function love.load()
     love.window.setMode(600, 600)
+    love.window.setTitle("오량인의 성능 안 좋은 Tic-Tac-Toe")
     for row = 1, gridSize do
         grid[row] = {}
         for col = 1, gridSize do

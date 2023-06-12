@@ -3,6 +3,8 @@ local cellSize = 190
 local grid = {}
 local clicktime = 0
 local WhoWin = ""
+local Wincheck1 = 0
+local Wincheck2 = 0
 
 function love.load()
     love.window.setMode(600, 600)
@@ -13,6 +15,7 @@ function love.load()
             grid[row][col] = 0
         end
     end
+    pause = false
 end
 
 function love.update(dt)
@@ -36,23 +39,6 @@ function love.update(dt)
     if Draw then
         WhoWin = "Draw"
     end
-end
-
-function love.draw()
-    for row = 1, gridSize do
-        for col = 1, gridSize do
-            local x = (col - 1) * cellSize
-            local y = (row - 1) * cellSize
-            love.graphics.rectangle('line', x, y, cellSize, cellSize)
-
-            if grid[row][col] == 1 then                
-                love.graphics.print("O", x + cellSize / 2, y + cellSize / 2)
-            elseif grid[row][col] == 2 then
-                love.graphics.print("X", x + cellSize / 2, y + cellSize / 2)
-            end
-        end
-    end
-    love.graphics.print(WhoWin, 500, 50)
 end
 
 function love.mousepressed(x, y, button)
@@ -82,6 +68,7 @@ function WinCheck()
     (grid[1][1] == 1 and grid[2][2] == 1 and grid[3][3] == 1) or
     (grid[1][3] == 1 and grid[2][2] == 1 and grid[3][1] == 1) then
         WhoWin = "O Wins"
+        Wincheck1 = Wincheck1 + 1
     elseif
     (grid[1][1] == 2 and grid[1][2] == 2 and grid[1][3] == 2) or
     (grid[2][1] == 2 and grid[2][2] == 2 and grid[2][3] == 2) or
@@ -92,5 +79,25 @@ function WinCheck()
     (grid[1][1] == 2 and grid[2][2] == 2 and grid[3][3] == 2) or
     (grid[1][3] == 2 and grid[2][2] == 2 and grid[3][1] == 2) then
         WhoWin = "X Wins"
+        Wincheck2 = Wincheck2 + 1
     end
+end
+
+function love.draw()
+    for row = 1, gridSize do
+        for col = 1, gridSize do
+            local x = (col - 1) * cellSize
+            local y = (row - 1) * cellSize
+            love.graphics.rectangle('line', x, y, cellSize, cellSize)
+
+            if grid[row][col] == 1 then                
+                love.graphics.print("O", x + cellSize / 2, y + cellSize / 2)
+            elseif grid[row][col] == 2 then
+                love.graphics.print("X", x + cellSize / 2, y + cellSize / 2)
+            end
+        end
+    end
+    love.graphics.print(WhoWin, 500, 50)
+    love.graphics.print("O : " .. Wincheck1, 500, 100)
+    love.graphics.print("X : " .. Wincheck2, 500, 150)
 end

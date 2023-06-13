@@ -276,14 +276,15 @@ function love.update(dt)
 
     if love.keyboard.isDown("space") and not player.isJumping and not player.isAttack1 and not player.isDodge and not player.isDodgeCooldown then
         player.isDodge = true
+        player.isMove = false
+        player.isJumping = false
+        player.isRunning = false
         if player.direction == "left" then
             player.anim = player.anim % #player.animations.dodgeLeft + 1
-            player.speed = 400
-            moveX = -2
+            moveX = -4
         else
             player.anim = player.anim % #player.animations.dodge + 1
-            player.speed = 400
-            moveX = 2
+            moveX = 4
         end
         player.isDodgeCooldown = true  -- Set the dodge cooldown flag
     end
@@ -370,7 +371,7 @@ function love.draw()
         end
     elseif not player.isMoving and not player.isDodge and not player.isJumping then
         -- Idle animation
-        if animDirection == "left" then
+        if animDirection == "left" and not player.isDodge then
             img = player.animations.idleleft[math.floor(player.anim)]
         else
             img = player.animations.idle[math.floor(player.anim)]

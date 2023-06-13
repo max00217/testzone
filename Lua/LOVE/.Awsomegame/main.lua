@@ -148,6 +148,22 @@ function love.load()
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_walk/walk5L.png"),
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_walk/walk6L.png")
             },
+            run = {
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_run/run1.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_run/run2.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_run/run3.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_run/run4.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_run/run5.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_run/run6.png")
+            },
+            runLeft = {
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_run/run1L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_run/run2L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_run/run3L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_run/run4L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_run/run5L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_run/run6L.png")
+            },
             jump = {
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_jump/jump3.png"),
             },
@@ -170,11 +186,29 @@ function love.load()
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack1/attack5L.png"),
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack1/attack6L.png")
             },
+            -- attack2{
 
+            -- },
+            -- attack2Left{
+
+            -- },
+            -- attack3{
+
+            -- },
+            -- attack3Left{
+
+            -- },
+            -- dodge{
+
+            -- },
+            -- dodgeLeft{
+
+            -- },
         },
         anim = 1,
         isMoving = false,
         isJumping = false,
+        isRunning = false,
         isAttack1 = false,
         isAttack2 = false,
         isAttack3 = false,
@@ -200,9 +234,21 @@ function love.update(dt)
     if love.keyboard.isDown("a") then
         moveX = -1
         player.direction = "left"
+        if love.keyboard.isDown("lshift") then
+            moveX = -2.2
+            player.isRunning = true
+        else
+            player.isRunning = false
+        end
     elseif love.keyboard.isDown("d") then
         moveX = 1
         player.direction = "right"
+        if love.keyboard.isDown("lshift") then
+            moveX = 2.2
+            player.isRunning = true
+        else
+            player.isRunning = false
+        end
     end
 
     if love.keyboard.isDown("w") and not player.isJumping then
@@ -213,10 +259,11 @@ function love.update(dt)
         player.isJumpAnimPlayed = false
     end
 
-    if love.mouse.isDown(1) then
-        player.isAttack1 = true
+    if not player.isMoving and not player.isJumping then
+        if love.mouse.isDown(1) then
+            player.isAttack1 = true
+        end
     end
-    
 
     if not player.isMoving and not player.isJumping then
         if player.direction == "left" then
@@ -233,6 +280,7 @@ function love.update(dt)
         player.anim = ((player.anim + 10 * dt) - 1) % 6 + 1
     else
         player.isMoving = false
+        player.isRunning = false
     end
 
     if player.isJumping then
@@ -292,6 +340,14 @@ function love.draw()
     else
         -- Walking animation
         img = player.animations[animDirection][math.floor(player.anim)]
+    end
+    
+    if player.isRunning == true then
+        if animDirection == "left" then
+            img = player.animations.runLeft[math.floor(player.anim)]
+        else
+            img = player.animations.run[math.floor(player.anim)]
+        end
     end
     
     if player.isAttack1 then

@@ -1,8 +1,19 @@
-Table = {1, 2, 3, 4, 5, 6}
+function isMunchausenNumber(num)
+    local digits = {}
+    for digit in string.gmatch(tostring(num), "%d") do
+        table.insert(digits, tonumber(digit))
+    end
 
-for i = 1, 5 do
-    local q = math.random(i, #Table)
-    local w = Table[q]
-    print(w)
-    table.remove(Table, w)
+    local poweredSum = 0
+    for _, digit in ipairs(digits) do
+        poweredSum = poweredSum + math.pow(digit, digit)
+    end
+
+    return poweredSum == num
+end
+
+for num = 1, 200000 do
+    if isMunchausenNumber(num) then
+        print(num)
+    end
 end

@@ -152,6 +152,6 @@ async def gramm(ctx, *, txt:str):
     await ctx.reply(f"```원본 문장 : {reresult.get('original')}\n수정된 문장 : {reresult.get('checked')}```")
 
 def new_func(app):
-    app.run("MTA0MjIyOTEwNjcyMjQ5MjQ3Nw.G3hZrD.i4jE3JxMTiUflpyq8fTt_lcBOsnXyp7efXAqzE")
+    app.run("tq")
 
 new_func(app)

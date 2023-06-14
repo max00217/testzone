@@ -253,6 +253,6 @@ async def stop(ctx):
         await ctx.send('X')
 
 def new_func(app):
-    app.run('NzA0OTE2NTk5NzQ3OTAzNTU5.GP8caw.4m6T532rAwauhErPvL1ZwCiQTdOexBWEmWmOM4') #봇 토큰
+    app.run('tq') #봇 토큰
 
 new_func(app)

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THGeneral.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THHalf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THAllocator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THSize.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THStorage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THTensor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THBlas.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THLapack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THLogAdd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THRandom.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THFile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THDiskFile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THMemoryFile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THAtomic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THVector.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\generic\simd\convolve.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\generic\simd\convolve5x5_sse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\vector\AVX.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\generic\simd\convolve5x5_avx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\vector\AVX2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THGeneral.h.in">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THHalf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THSize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THStorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THTensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THTensorApply.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THBlas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THMath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THLapack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THLogAdd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THRandom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THVector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THAtomic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5C40096F-4E0C-38AC-BEDF-AEFCB729399E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3D03DCF8-E66E-3D32-9E94-28CACD4B82C1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

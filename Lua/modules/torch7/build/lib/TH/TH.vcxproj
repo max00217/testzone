@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5E71B93A-D74D-38D6-A246-14C22B0B0D2E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>TH</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TH.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TH</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TH.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TH</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">TH.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">TH</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">TH.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">TH</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);USE_SSE4_1;USE_SSE4_2;USE_AVX2;USE_AVX;USE_SSE3;USE_SSE2;WIN32;_WINDOWS;USE_GCC_GET_CPUID;TH_HAVE_THREAD;_CRT_SECURE_NO_DEPRECATE=1;USE_MSC_ATOMICS=1;CMAKE_INTDIR="Debug";TH_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;USE_SSE4_1;USE_SSE4_2;USE_AVX2;USE_AVX;USE_SSE3;USE_SSE2;_WINDOWS;USE_GCC_GET_CPUID;TH_HAVE_THREAD;_CRT_SECURE_NO_DEPRECATE=1;USE_MSC_ATOMICS=1;CMAKE_INTDIR=\"Debug\";TH_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/TH/Debug/TH.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/Debug/TH.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);USE_SSE4_1;USE_SSE4_2;USE_AVX2;USE_AVX;USE_SSE3;USE_SSE2;WIN32;_WINDOWS;USE_GCC_GET_CPUID;TH_HAVE_THREAD;NDEBUG;_CRT_SECURE_NO_DEPRECATE=1;USE_MSC_ATOMICS=1;CMAKE_INTDIR="Release";TH_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;USE_SSE4_1;USE_SSE4_2;USE_AVX2;USE_AVX;USE_SSE3;USE_SSE2;_WINDOWS;USE_GCC_GET_CPUID;TH_HAVE_THREAD;NDEBUG;_CRT_SECURE_NO_DEPRECATE=1;USE_MSC_ATOMICS=1;CMAKE_INTDIR=\"Release\";TH_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/TH/Release/TH.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/Release/TH.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);USE_SSE4_1;USE_SSE4_2;USE_AVX2;USE_AVX;USE_SSE3;USE_SSE2;WIN32;_WINDOWS;USE_GCC_GET_CPUID;TH_HAVE_THREAD;NDEBUG;_CRT_SECURE_NO_DEPRECATE=1;USE_MSC_ATOMICS=1;CMAKE_INTDIR="MinSizeRel";TH_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;USE_SSE4_1;USE_SSE4_2;USE_AVX2;USE_AVX;USE_SSE3;USE_SSE2;_WINDOWS;USE_GCC_GET_CPUID;TH_HAVE_THREAD;NDEBUG;_CRT_SECURE_NO_DEPRECATE=1;USE_MSC_ATOMICS=1;CMAKE_INTDIR=\"MinSizeRel\";TH_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/TH/MinSizeRel/TH.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/MinSizeRel/TH.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);USE_SSE4_1;USE_SSE4_2;USE_AVX2;USE_AVX;USE_SSE3;USE_SSE2;WIN32;_WINDOWS;USE_GCC_GET_CPUID;TH_HAVE_THREAD;NDEBUG;_CRT_SECURE_NO_DEPRECATE=1;USE_MSC_ATOMICS=1;CMAKE_INTDIR="RelWithDebInfo";TH_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;USE_SSE4_1;USE_SSE4_2;USE_AVX2;USE_AVX;USE_SSE3;USE_SSE2;_WINDOWS;USE_GCC_GET_CPUID;TH_HAVE_THREAD;NDEBUG;_CRT_SECURE_NO_DEPRECATE=1;USE_MSC_ATOMICS=1;CMAKE_INTDIR=\"RelWithDebInfo\";TH_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/TH/RelWithDebInfo/TH.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/RelWithDebInfo/TH.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/lib/TH/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\mingw64\bin\cmake.exe" -SC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7 -BC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build --check-stamp-file C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/TH/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckCSourceRuns.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckCXXSourceRuns.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckFortranFunctionExists.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckTypeSize.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Internal\CheckSourceRuns.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THConfig.cmake.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THGeneral.h.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindARM.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindBLAS.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindLAPACK.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindMKL.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindSSE.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/lib/TH/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\mingw64\bin\cmake.exe" -SC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7 -BC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build --check-stamp-file C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/TH/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckCSourceRuns.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckCXXSourceRuns.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckFortranFunctionExists.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckTypeSize.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Internal\CheckSourceRuns.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THConfig.cmake.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THGeneral.h.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindARM.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindBLAS.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindLAPACK.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindMKL.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindSSE.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/lib/TH/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\mingw64\bin\cmake.exe" -SC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7 -BC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build --check-stamp-file C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/TH/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckCSourceRuns.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckCXXSourceRuns.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckFortranFunctionExists.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckTypeSize.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Internal\CheckSourceRuns.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THConfig.cmake.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THGeneral.h.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindARM.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindBLAS.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindLAPACK.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindMKL.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindSSE.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/lib/TH/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\mingw64\bin\cmake.exe" -SC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7 -BC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build --check-stamp-file C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/TH/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckCSourceRuns.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckCXXSourceRuns.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckFortranFunctionExists.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckFunctionExists.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckIncludeFile.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CheckTypeSize.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Internal\CheckSourceRuns.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THConfig.cmake.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THGeneral.h.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindARM.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindBLAS.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindLAPACK.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindMKL.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\cmake\FindSSE.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THGeneral.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THHalf.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THAllocator.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THSize.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THStorage.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THTensor.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THBlas.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THLapack.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THLogAdd.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THRandom.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THFile.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THDiskFile.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THMemoryFile.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THAtomic.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THVector.c" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THGeneral.h.in" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THHalf.h" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THAllocator.h" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THSize.h" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THStorage.h" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THTensor.h" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THTensorApply.h" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THBlas.h" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THMath.h" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THLapack.h" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THLogAdd.h" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THRandom.h" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THVector.h" />
+    <ClInclude Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\THAtomic.h" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\generic\simd\convolve.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\generic\simd\convolve5x5_sse.c">
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Fast</FloatingPointModel>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Fast</FloatingPointModel>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Fast</FloatingPointModel>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Fast</FloatingPointModel>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\vector\AVX.c">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\generic\simd\convolve5x5_avx.c">
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Fast</FloatingPointModel>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Fast</FloatingPointModel>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Fast</FloatingPointModel>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Fast</FloatingPointModel>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH\vector\AVX2.c">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</ScanSourceforModuleDependencies>
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Full</Optimization>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</ScanSourceforModuleDependencies>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\ZERO_CHECK.vcxproj">
+      <Project>{EE9DF82F-3949-3750-895A-E46BA7F1D7EA}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

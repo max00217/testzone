@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\DiskFile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\File.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\MemoryFile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\PipeFile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\Storage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\Tensor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\Timer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\TensorOperator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\TensorMath.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\random.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\Generator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\31a3d55debd47be2f1d526b941ac7932\TensorMath.c.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\31a3d55debd47be2f1d526b941ac7932\random.c.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EB2CB9EB-680B-3F5C-8C33-E077A383AC8D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3D03DCF8-E66E-3D32-9E94-28CACD4B82C1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

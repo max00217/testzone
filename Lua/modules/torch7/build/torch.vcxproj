@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{73F9513E-BEAC-379D-9285-EBCD0E3C42C7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>torch</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">torch.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libtorch</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">torch.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libtorch</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">torch.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libtorch</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">torch.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libtorch</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\luaT;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE=1;CMAKE_INTDIR="Debug";torch_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE=1;CMAKE_INTDIR=\"Debug\";torch_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\luaT;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\luaT;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>lib\luaT\Debug\luaT.lib;lib\TH\Debug\TH.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7;C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/Debug/libtorch.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/Debug/libtorch.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\luaT;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE=1;CMAKE_INTDIR="Release";torch_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE=1;CMAKE_INTDIR=\"Release\";torch_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\luaT;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\luaT;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>lib\luaT\Release\luaT.lib;lib\TH\Release\TH.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7;C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/Release/libtorch.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/Release/libtorch.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\luaT;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE=1;CMAKE_INTDIR="MinSizeRel";torch_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE=1;CMAKE_INTDIR=\"MinSizeRel\";torch_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\luaT;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\luaT;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>lib\luaT\MinSizeRel\luaT.lib;lib\TH\MinSizeRel\TH.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7;C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/MinSizeRel/libtorch.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/MinSizeRel/libtorch.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\luaT;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE=1;CMAKE_INTDIR="RelWithDebInfo";torch_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE=1;CMAKE_INTDIR=\"RelWithDebInfo\";torch_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\luaT;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\luaT;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\lib\TH;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>lib\luaT\RelWithDebInfo\luaT.lib;lib\TH\RelWithDebInfo\TH.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7;C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/RelWithDebInfo/libtorch.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/RelWithDebInfo/libtorch.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\31a3d55debd47be2f1d526b941ac7932\TensorMath.c.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating TensorMath.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\TensorMath.lua C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/TensorMath.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\TensorMath.lua;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\TensorMath.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating TensorMath.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\TensorMath.lua C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/TensorMath.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\TensorMath.lua;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\TensorMath.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating TensorMath.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\TensorMath.lua C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/TensorMath.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\TensorMath.lua;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\TensorMath.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating TensorMath.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\TensorMath.lua C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/TensorMath.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\TensorMath.lua;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\TensorMath.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\31a3d55debd47be2f1d526b941ac7932\random.c.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating random.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\random.lua C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/random.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\random.lua;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\random.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating random.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\random.lua C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/random.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\random.lua;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\random.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating random.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\random.lua C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/random.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\random.lua;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\random.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating random.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\random.lua C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/random.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\random.lua;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\random.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\mingw64\bin\cmake.exe" -SC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7 -BC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build --check-stamp-file C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCCompiler.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCCompilerABI.c;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineSystem.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeFindBinUtils.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeRCInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeSystem.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Internal\FeatureTesting.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeCCompiler.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeSystem.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchConfig.cmake.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchExports.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchPackage.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchPaths.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchPathsInit.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchWrap.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchWrap.cmake.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\paths.lua.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\mingw64\bin\cmake.exe" -SC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7 -BC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build --check-stamp-file C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCCompiler.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCCompilerABI.c;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineSystem.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeFindBinUtils.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeRCInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeSystem.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Internal\FeatureTesting.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeCCompiler.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeSystem.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchConfig.cmake.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchExports.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchPackage.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchPaths.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchPathsInit.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchWrap.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchWrap.cmake.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\paths.lua.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\mingw64\bin\cmake.exe" -SC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7 -BC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build --check-stamp-file C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCCompiler.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCCompilerABI.c;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineSystem.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeFindBinUtils.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeRCInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeSystem.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Internal\FeatureTesting.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeCCompiler.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeSystem.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchConfig.cmake.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchExports.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchPackage.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchPaths.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchPathsInit.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchWrap.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchWrap.cmake.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\paths.lua.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\mingw64\bin\cmake.exe" -SC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7 -BC:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build --check-stamp-file C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCCompiler.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCCompilerABI.c;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCXXInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeDetermineSystem.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeFindBinUtils.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeRCInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeSystem.cmake.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\MSVC.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindOpenMP.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Internal\FeatureTesting.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\Windows.cmake;C:\Program Files\mingw64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeCCompiler.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeCXXCompiler.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeRCCompiler.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\3.26.3\CMakeSystem.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchConfig.cmake.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchExports.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchPackage.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchPaths.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchPathsInit.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchWrap.cmake;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\cmake\TorchWrap.cmake.in;C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\paths.lua.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\DiskFile.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\File.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\MemoryFile.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\PipeFile.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\Storage.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\Tensor.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\Timer.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\utils.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\init.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\TensorOperator.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\TensorMath.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\random.c" />
+    <ClCompile Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\Generator.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\ZERO_CHECK.vcxproj">
+      <Project>{EE9DF82F-3949-3750-895A-E46BA7F1D7EA}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\TH\TH.vcxproj">
+      <Project>{5E71B93A-D74D-38D6-A246-14C22B0B0D2E}</Project>
+      <Name>TH</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\makpu\Downloads\proj\project\Lua\.modules\torch7\build\lib\luaT\luaT.vcxproj">
+      <Project>{7BFB5533-95BC-3F84-AD6E-A20AE92E1F9B}</Project>
+      <Name>luaT</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

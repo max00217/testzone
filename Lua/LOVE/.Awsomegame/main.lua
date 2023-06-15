@@ -9,7 +9,23 @@ local dTimer = 0
 
 function love.load()
     love.window.setMode(960, 540)
+    background = love.graphics.newImage("Assets/BG/BG.jpg")
+    local screenWidth = love.graphics.getWidth()
+    local screenHeight = love.graphics.getHeight()
 
+    local scaleWidth = screenWidth / background:getWidth()
+    local scaleHeight = screenHeight / background:getHeight()
+    local scale = math.min(scaleWidth, scaleHeight)
+    local newWidth = background:getWidth() * scale
+    local newHeight = background:getHeight() * scale
+    local x = (screenWidth - newWidth) / 2
+    local y = (screenHeight - newHeight) / 2
+    BG = {
+        x = x,
+        y = y,
+        width = newWidth,
+        height = newHeight
+    }
     player = {
         x = 480,
         y = 355,
@@ -359,6 +375,7 @@ function love.mousepressed(x, y, button)
 end
 
 function love.draw()
+    love.graphics.draw(background, BG.x, BG.y, 0, BG.width / background:getWidth(), BG.height / background:getHeight())
     local animDirection = player.direction
     local img, x, y, scaleX, scaleY = nil, player.x, player.y, player.scale, player.scale
 

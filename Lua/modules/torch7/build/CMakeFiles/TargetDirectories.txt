@@ -1,9 +1,0 @@
-C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/CMakeFiles/torch.dir
-C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/CMakeFiles/INSTALL.dir
-C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/CMakeFiles/INSTALL.dir
-C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/TH/CMakeFiles/TH.dir
-C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/TH/CMakeFiles/INSTALL.dir
-C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/luaT/CMakeFiles/luaT.dir
-C:/Users/makpu/Downloads/proj/project/Lua/.modules/torch7/build/lib/luaT/CMakeFiles/INSTALL.dir

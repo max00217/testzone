@@ -1,4 +1,3 @@
--- main.lua
 local drawGround
 local animTime = 0
 local dodgeTime = 0
@@ -230,12 +229,18 @@ function love.load()
             -- },
             dodge = {
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_dodge/dodge1.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_dodge/dodge1.png"),
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_dodge/dodge2.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_dodge/dodge2.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_dodge/dodge3.png"),
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_dodge/dodge3.png")
             },
             dodgeLeft = {
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_dodge/dodge1L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_dodge/dodge1L.png"),
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_dodge/dodge2L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_dodge/dodge2L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_dodge/dodge3L.png"),
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_dodge/dodge3L.png")
             },
         },
@@ -307,11 +312,13 @@ function love.update(dt)
         player.isJumping = false
         player.isRunning = false
         if player.direction == "left" then
-            player.anim = player.anim % #player.animations.dodgeLeft + 1
-            moveX = -4
+            -- player.anim = player.anim % #player.animations.dodgeLeft + 1
+            moveX = -30
+            -- player.speed = 400
         else
-            player.anim = player.anim % #player.animations.dodge + 1
-            moveX = 4
+            -- player.anim = player.anim % #player.animations.dodge + 1
+            moveX = 30
+            -- player.speed = 400
         end
         player.isDodgeCooldown = true  -- Set the dodge cooldown flag
     end
@@ -481,6 +488,7 @@ function love.draw()
         player.isAttack1 = false
         player.isAttack2 = false
         player.isAttack3 = false
+        player.isIdle = false
         local animDirection = player.direction
         if animDirection == "left" then
             img = player.animations.dodgeLeft[math.floor(dodgeTime)]
@@ -496,6 +504,5 @@ function love.draw()
     if img then
         love.graphics.draw(img, x, y, 0, scaleX, scaleY)
     end
-
     drawGround()
 end

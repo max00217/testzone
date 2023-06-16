@@ -206,16 +206,26 @@ function love.load()
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack1/attack5L.png"),
                 love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack1/attack6L.png")
             },
-            -- attack2{
+            attack2 = {
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack2/attack21.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack2/attack22.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack2/attack23.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack2/attack24.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack2/attack25.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack2/attack26.png")
+            },
+            attack2Left = {
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack2/attack21L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack2/attack22L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack2/attack23L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack2/attack24L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack2/attack25L.png"),
+                love.graphics.newImage("Assets/Main3/GraveRobber/GraveRobber_attack2/attack26L.png")
+            },
+            -- attack3 = {
 
             -- },
-            -- attack2Left{
-
-            -- },
-            -- attack3{
-
-            -- },
-            -- attack3Left{
+            -- attack3Left = {
 
             -- },
             dodge = {
@@ -230,6 +240,7 @@ function love.load()
             },
         },
         anim = 1,
+        isIdle = true,
         isMoving = false,
         isJumping = false,
         isRunning = false,
@@ -311,18 +322,30 @@ function love.update(dt)
         player.speed = 200
     end
     
-    if not player.isMoving and not player.isDodge or (player.isMoving and player.isJumping) then
-        if love.mouse.isDown(1) and not player.isAttack1 and not player.isAttackCooldown then
+    if not player.isMoving and not player.isAttack2 and not player.isDodge or (player.isMoving and player.isJumping) then
+        if love.mouse.isDown(1) and not player.isAttack1 and not player.isAttack1Cooldown then
             player.isMoving = false
             player.isAttack1 = true
-            player.isAttackCooldown = true  -- Set the attack cooldown flag
+            player.isAttack1Cooldown = true  -- Set attack cooldown
         end
     end
     
     if not love.mouse.isDown(1) then
-        player.isAttackCooldown = false  -- Reset the attack cooldown flag when the mouse button is released
+        player.isAttack1Cooldown = false  -- Reset attack cooldown
     end
     
+    if not player.isMoving and not player.isAttack1 and not player.isDodge or (player.isMoving and player.isJumping) then
+        if love.mouse.isDown(2) and not player.isAttack2 and not player.isAttack2Cooldown then
+            player.isMoving = false
+            player.isAttack2 = true
+            player.isAttack2Cooldown = true  -- Set attack cooldown
+        end
+    end
+    
+    if not love.mouse.isDown(2) then
+        player.isAttackwCooldown = false  -- Reset attack cooldown
+    end
+
     if not player.isMoving and not player.isJumping then
         if player.direction == "left" then
             player.anim = player.anim % #player.animations.idleleft + 1
@@ -366,11 +389,23 @@ function love.update(dt)
             player.anim = 1
         end
     end
+    if love.keyboard.isDown("escape") then
+        love.event.quit()
+    end
+    player.isIdle = true
 end
 
 function love.mousepressed(x, y, button)
     if button == 1 then
         player.isAttack1 = true
+        player.isMoving = false
+        player.isDodge = false
+        player.isIdle = false
+    elseif button == 2 then
+        player.isAttack2 = true
+        player.isMoving = false        
+        player.isDodge = false
+        player.isIdle = false
     end
 end
 
@@ -386,7 +421,7 @@ function love.draw()
         else
             img = player.animations.jump[math.floor(player.anim)]
         end
-    elseif not player.isMoving and not player.isDodge and not player.isJumping then
+    elseif player.isIdle and not player.isMoving and not player.isDodge and not player.isJumping then
         -- Idle animation
         if animDirection == "left" and not player.isDodge then
             img = player.animations.idleleft[math.floor(player.anim)]
@@ -408,8 +443,11 @@ function love.draw()
             img = player.animations.run[math.floor(player.anim)]
         end
     end
-    
+   
     if player.isAttack1 then
+        player.isIdle = false
+        player.isMoving = false
+        player.isMoving = false
         if player.direction == "left" then
             img = player.animations.attack1Left[math.floor(animTime)]
         else
@@ -418,6 +456,21 @@ function love.draw()
         if math.floor(animTime) > #player.animations.attack1 then
             animTime = 1
             player.isAttack1 = false
+        end
+    end
+
+    if player.isAttack2 then
+        player.isIdle = false
+        player.isMoving = false
+        player.isMoving = false
+        if player.direction == "left" then
+            img = player.animations.attack2Left[math.floor(animTime)]
+        else
+            img = player.animations.attack2[math.floor(animTime)]
+        end
+        if math.floor(animTime) > #player.animations.attack2 then
+            animTime = 1
+            player.isAttack2 = false
         end
     end
 
@@ -441,13 +494,8 @@ function love.draw()
     end
 
     if img then
-        -- Adjust y coordinate for the larger size
-        -- y = y - (img:getHeight() * (player.scale - 1))
-
-        -- Draw the character
         love.graphics.draw(img, x, y, 0, scaleX, scaleY)
     end
 
-    -- Draw the ground line 
     drawGround()
 end

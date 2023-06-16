@@ -1,10 +1,12 @@
 local drawGround
 local animTime = 0
 local dodgeTime = 0
-local animationSpeed = 13
+local animationSpeed = 16
+local DodgeSpeed = 15
 local animationSpeedfordodge = 7
+local gravity = 1300
 local dodgeDuration = 0.3
-local dTimer = 0
+local dodgeTimer = 0
 
 function love.load()
     love.window.setMode(960, 540)
@@ -266,12 +268,11 @@ function love.load()
     end
 end
 
-local gravity = 1300
-
 function love.update(dt)
     animTime = animTime + animationSpeed * dt
-    dodgeTime = dodgeTime + animationSpeedfordodge * dt
+    dodgeTime = dodgeTime + DodgeSpeed * dt 
     local moveX = 0
+    
     if player.isDodge == false then
         player.speed = 200
     end
@@ -286,6 +287,14 @@ function love.update(dt)
         else
             player.isRunning = false
         end
+        if love.keyboard.isDown("space") and not player.isAttack1 and not player.isAttack2 and not player.isAttack3 and not player.isJumping and not player.isDodgeCooldown then
+            moveX = -20
+            player.isDodge = true
+            player.isMove = true
+            player.isDodgeCooldown = true
+        else
+            player.isDodge = false
+        end
     elseif love.keyboard.isDown("d") and not player.isDodge then
         moveX = 1
         player.isMoving  = true
@@ -295,6 +304,14 @@ function love.update(dt)
             player.isRunning = true
         else
             player.isRunning = false
+        end
+        if love.keyboard.isDown("space") and not player.isAttack1 and not player.isAttack2 and not player.isAttack3 and not player.isJumping and not player.isDodgeCooldown then
+            moveX = 20
+            player.isDodge = true
+            player.isMove = true
+            player.isDodgeCooldown = true
+        else
+            player.isDodge = false
         end
     end
 
@@ -306,29 +323,12 @@ function love.update(dt)
         player.isJumpAnimPlayed = false
     end
 
-    if love.keyboard.isDown("space") and not player.isJumping and not player.isAttack1 and not player.isDodge and not player.isDodgeCooldown then
-        player.isDodge = true
-        player.isMove = false
-        player.isJumping = false
-        player.isRunning = false
-        if player.direction == "left" then
-            -- player.anim = player.anim % #player.animations.dodgeLeft + 1
-            moveX = -30
-            -- player.speed = 400
-        else
-            -- player.anim = player.anim % #player.animations.dodge + 1
-            moveX = 30
-            -- player.speed = 400
-        end
-        player.isDodgeCooldown = true  -- Set the dodge cooldown flag
-    end
-    
     if not love.keyboard.isDown("space") then
         player.isDodgeCooldown = false  -- Reset the dodge cooldown flag when the space button is released
         player.isDodge = false
         player.speed = 200
     end
-    
+
     if not player.isMoving and not player.isAttack2 and not player.isDodge or (player.isMoving and player.isJumping) then
         if love.mouse.isDown(1) and not player.isAttack1 and not player.isAttack1Cooldown then
             player.isMoving = false
@@ -336,11 +336,10 @@ function love.update(dt)
             player.isAttack1Cooldown = true  -- Set attack cooldown
         end
     end
-    
+
     if not love.mouse.isDown(1) then
         player.isAttack1Cooldown = false  -- Reset attack cooldown
     end
-    
     if not player.isMoving and not player.isAttack1 and not player.isDodge or (player.isMoving and player.isJumping) then
         if love.mouse.isDown(2) and not player.isAttack2 and not player.isAttack2Cooldown then
             player.isMoving = false
@@ -348,7 +347,7 @@ function love.update(dt)
             player.isAttack2Cooldown = true  -- Set attack cooldown
         end
     end
-    
+
     if not love.mouse.isDown(2) then
         player.isAttackwCooldown = false  -- Reset attack cooldown
     end
@@ -398,6 +397,8 @@ function love.update(dt)
     end
     if love.keyboard.isDown("escape") then
         love.event.quit()
+    elseif love.keyboard.isDown("lctrl") and love.keyboard.isDown("r") then
+        love.event.quit("restart")
     end
     player.isIdle = true
 end
@@ -420,6 +421,14 @@ function love.draw()
     love.graphics.draw(background, BG.x, BG.y, 0, BG.width / background:getWidth(), BG.height / background:getHeight())
     local animDirection = player.direction
     local img, x, y, scaleX, scaleY = nil, player.x, player.y, player.scale, player.scale
+
+    if player.isDodge then
+        love.graphics.rectangle("fill", player.x, player.y, 100, 100)
+    elseif player.isJumping then
+        love.graphics.rectangle("fill", player.x, player.y, 100, 100, 100, 100, 100, 100)
+    elseif player.isAttack1 or player.isAttack2 or player.isAttack3 then
+        love.graphics.rectangle("fill", player.x, player.y, 30, 30)
+    end
 
     if player.isJumping then
         -- Jump animation
@@ -496,7 +505,7 @@ function love.draw()
             img = player.animations.dodge[math.floor(dodgeTime)]
         end
         if math.floor(dodgeTime) > #player.animations.dodge then
-            dodgeTime = 1
+            dodgeTime = 0.1
             player.isDodge = false
         end
     end

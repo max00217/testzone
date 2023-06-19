@@ -1,3 +1,4 @@
+math.randomseed(os.time())
 function binarySearch(tablearr, target)
     local low = 1 -- low에 1을 저장(여기서 low는 배열의 첫 번째 인덱스)
     local high = #tablearr -- high에 tablearr의 길이를 저장(즉, 배열의 가장 마지막 인덱스를 뜻함)
@@ -13,11 +14,18 @@ function binarySearch(tablearr, target)
             high = mid - 1 -- 아니면, high에 mid - 1을 저장 
         end
     end
-    return -1  -- 타겟이 배열에 없을 경우 -1을 반환
+    return nil  -- 타겟이 배열에 없을 경우 -1을 반환
 end
 
 -- 정렬된 배열에서 7을 찾기 위한 이진 탐색
 tablearr = {6, 3, 10, 4, 9, 11, 5, 29} -- tablearr에 무작위 배열 저장
+for i = 1, 15 do
+    table.insert(tablearr, math.random(1, 30))
+end
+
 target = 5 -- target에 찾을 값 저장
 index = binarySearch(tablearr, target) -- index에 binarySearch 함수의 반환값 저장
+for k,v in pairs(tablearr) do
+    print(k,v)
+end
 print(index)  --> 3 (루아의 인덱스는 1부터 시작)

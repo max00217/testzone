@@ -1,34 +1,51 @@
 -- DCT 함수 정의
-local function DCT(x) -- x는 입력 시계열 데이터
-    local N = #x -- N에 x의 길이 저장(#x는 x의 길이)
-    local X = {} -- X에 빈 테이블을 초기화
-  
+local function DCT(data)
+    local height, width = #data, #data[1] -- 데이터의 높이와 너비
+    local transformedData = {} -- 변환된 데이터를 저장할 테이블
+
     -- 가중치 계산용 함수
     local function alpha(k)
-        if k == 0 then -- k가 0이면
-            return 1 / math.sqrt(N) -- 1 / math.sqrt(N) 반환(math.sqrt(N)는 N의 제곱근)
+        if k == 0 then
+            return 1 / math.sqrt(width)
         else
-            return math.sqrt(2 / N) --  math.sqrt(2 / N) 반환(math.sqrt(2 / N)는 2 / N의 제곱근)
+            return math.sqrt(2 / width)
         end
     end
-  
+
     -- 이산 코사인 변환 수행
-    for k = 0, N - 1 do -- 0부터 N-1까지 반복
-        local sum = 0 -- sum에 0 저장
-        for n = 0, N - 1 do -- 0부터 N-1까지 반복
-            local angle = math.pi * (2 * n + 1) * k / (2 * N) -- angle에 math.pi * (2 * n + 1) * k / (2 * N) 저장(math.pi는 원주율)
-            sum = sum + x[n+1] * math.cos(angle) -- sum에 sum + x[n+1] * math.cos(angle) 저장(x[n+1]는 x의 n+1번째 인덱스의 값)
+    for u = 1, height do
+        transformedData[u] = {} -- 새로운 행 생성
+        for v = 1, width do
+            local sum = 0 -- 합을 초기화
+            for x = 1, width do
+                for y = 1, height do
+                    local angle = math.pi * (2 * (x - 1) + 1) * (u - 1) / (2 * width) -- 각도 계산
+                    angle = angle + math.pi * (2 * (y - 1) + 1) * (v - 1) / (2 * height)
+                    local coefficient = data[y][x] * math.cos(angle) -- 계수 계산
+                    sum = sum + coefficient -- 합 업데이트
+                end
+            end
+            transformedData[u][v] = alpha(u - 1) * alpha(v - 1) * sum -- 변환된 데이터 저장
         end
-        X[k+1] = alpha(k) * sum -- X[k+1]에 alpha(k) * sum 저장(alpha(k)는 k번째 가중치, sum은 위에서 계산한 값)
     end
-    return X -- X 반환
+
+    return transformedData -- 변환된 데이터 반환
 end
 
--- 입력 시계열 데이터 (예시용)
-local data = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20} -- data에 무작위 배열 저장
+-- 입력 데이터 (예시용)
+local data = {
+    {50, 30, 40, 70},
+    {60, 20, 80, 90},
+    {70, 10, 50, 60},
+    {80, 30, 40, 20}
+}
 
 -- DCT 변환 후 결과 출력
-local transformed_data = DCT(data) -- transformed_data에 DCT 함수의 반환값 저장
-for index, value in ipairs(transformed_data) do -- transformed_data의 각 요소에 대해 반복
-    print(string.format("%d: %f", index, value)) -- index - 1과 value를 출력
+local transformedData = DCT(data)
+print("DCT Compression:")
+for i, row in ipairs(transformedData) do
+    for j, value in ipairs(row) do
+        io.write(string.format("Pixel (%d, %d): %.2f\n", i, j, value))
+    end
 end
+

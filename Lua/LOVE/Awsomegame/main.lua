@@ -218,7 +218,7 @@ function love.draw()
     if player.isDodge then
         love.graphics.rectangle("fill", player.x, player.y, 100, 100)
     elseif player.isJumping then
-        love.graphics.rectangle("fill", player.x, player.y, 100, 100, 100, 100, 100, 100)
+        love.graphics.rectangle("fill", player.x, player.y, 100, 100, 100, 100, 100)
     elseif player.isAttack1 or player.isAttack2 or player.isAttack3 then
         love.graphics.rectangle("fill", player.x, player.y, 30, 30)
     end

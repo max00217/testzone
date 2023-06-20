@@ -17,6 +17,6 @@ local function isMunchausen (n)
     return sum == n
 end
 
-for i = 1, 5000000 do
+for i = 1, 50000000 do
     if isMunchausen(i) then print(i) end
-end 
+end

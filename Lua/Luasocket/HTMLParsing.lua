@@ -36,9 +36,8 @@ local function extract_meal_information(html_content)
   file:write("<html><head></head><body>")
 
   for _, table_element in ipairs(tables) do
-    file:write("식단 정보: " .. table_element:getcontent())
+    file:write("MEAL: " .. table_element:getcontent())
   end
-
   file:write("</body></html>")
   file:close()
 end

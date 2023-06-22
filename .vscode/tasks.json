@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "Run LuaJIT",
+        "label": "Run Lua",
         "type": "shell",
-        "command": "luajit",
+        "command": "lua",
         "args": [
           "${file}"
         ],

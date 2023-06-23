@@ -1,0 +1,1 @@
+io.write("U R GAY"); q = io.read();print(q);

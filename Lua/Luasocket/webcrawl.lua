@@ -28,7 +28,7 @@ function google_search(query, start_index)
   return json.decode(result_str)
 end
 
-local searchTerm = "Warframe"
+local searchTerm = "Warframe Excalibur Build"
 local startIndex = 1
 local result = google_search(searchTerm, startIndex)
 

@@ -11,7 +11,7 @@ autogui.click()
 
 --엔터 키 5번 반복 입력
 for i = 1, enterRepeat do
-    if i == 1 then
+if i == 1 then
         text = "뭉"
     elseif i == 2 then
         text = "탱"

@@ -8,7 +8,7 @@ function love.load()
     ball.dx, ball.dy = 0, 0
     r, g, b, a = 1, 1, 1, 0.1
 end
- 
+
 function reset()
     ball = { x = 320, y = 240, dx = math.random(-350, 350), dy = math.random(-350, 350) }
     paddle1 = { x = 20, y = 200, dy = 0, width = 10, height = 80 }
@@ -142,12 +142,12 @@ function love.keypressed(key)
         paddle2.dy = 450
     end
 end
-  
+
 function love.keyreleased(key)
     if key == "w" or key == "s" then
         paddle1.dy = 0
     end
     if key == "up" or key == "down" then
         paddle2.dy = 0
-        end
+    end
 end

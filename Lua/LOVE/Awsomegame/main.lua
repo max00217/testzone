@@ -52,7 +52,8 @@ function love.load()
         jumpSpeed = 400,
         jumpHeight = 200,
         jumpAnimSpeed = 10,
-        isJumpAnimPlayed = false
+        isJumpAnimPlayed = false,
+        cooldown = 0
     }
 
     drawGround = function()
@@ -73,9 +74,11 @@ function love.update(dt)
     if love.keyboard.isDown("a") and not player.isDodge then
         moveX = -1
         player.isMoving  = true
+        player.isIdle = false
         player.direction = "left"
         if love.keyboard.isDown("lshift") and not player.isDodge then
             moveX = -2.2
+            player.isIdle = false
             player.isRunning = true
         else
             player.isRunning = false
@@ -84,6 +87,7 @@ function love.update(dt)
             moveX = -20
             player.isDodge = true
             player.isMove = true
+            player.isIdle = false
             player.isDodgeCooldown = true
         else
             player.isDodge = false
@@ -91,6 +95,7 @@ function love.update(dt)
     elseif love.keyboard.isDown("d") and not player.isDodge then
         moveX = 1
         player.isMoving  = true
+        player.isIdle = false
         player.direction = "right"
         if love.keyboard.isDown("lshift") and not player.isDodge then
             moveX = 2.2
@@ -102,6 +107,7 @@ function love.update(dt)
             moveX = 20
             player.isDodge = true
             player.isMove = true
+            player.isIdle = false
             player.isDodgeCooldown = true
         else
             player.isDodge = false
@@ -111,28 +117,37 @@ function love.update(dt)
     if love.keyboard.isDown("w") and not player.isJumping then
         player.isJumping = true
         player.anim = 1
+        player.isIdle = false
         player.jumpStartY = player.y
         player.jumpSpeed = 400
         player.isJumpAnimPlayed = false
     end
 
     if not love.keyboard.isDown("space") then
-        player.isDodgeCooldown = false  -- Reset the dodge cooldown flag when the space button is released
+        player.isDodgeCooldown = false  -- Reset Dodge cooldown    
         player.isDodge = false
+        player.isIdle = false
         player.speed = 200
     end
 
+    player.cooldown = math.max(player.cooldown - dt, 0)
     if not player.isMoving and not player.isAttack2 and not player.isDodge or (player.isMoving and player.isJumping) then
-        if love.mouse.isDown(1) and not player.isAttack1 and not player.isAttack1Cooldown then
+        while love.mouse.isDown(1) and not player.isAttack1 and not player.isAttack1Cooldown and player.cooldown == 0 do
             player.isMoving = false
             player.isAttack1 = true
+            player.isIdle = false
             player.isAttack1Cooldown = true  -- Set attack cooldown
+            player.cooldown = player.cooldown + 1
         end
+        player.cooldown = math.max(player.cooldown,0)
     end
 
-    if not love.mouse.isDown(1) then
+    --[[if not love.mouse.isDown(1) then
         player.isAttack1Cooldown = false  -- Reset attack cooldown
-    end
+    end]]
+
+    
+
     if not player.isMoving and not player.isAttack1 and not player.isDodge or (player.isMoving and player.isJumping) then
         if love.mouse.isDown(2) and not player.isAttack2 and not player.isAttack2Cooldown then
             player.isMoving = false

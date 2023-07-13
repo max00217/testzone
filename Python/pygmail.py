@@ -1,9 +1,9 @@
 import imaplib
 import email
 
-email_address = "이메일 적는 곶"
-email_password = "앱 비밀번호 적는 곶"
-keyword = "키워드"
+email_address = str(input("Enter your email address: "))
+email_password = str(input("Enter your email app password: "))
+keyword = str(input("Enter the keyword you want to delete: "))
 
 mail = imaplib.IMAP4_SSL("imap.gmail.com")
 mail.login(email_address, email_password)

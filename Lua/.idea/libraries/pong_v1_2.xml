@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="pong_v1.2">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/LOVE/Pingpong/pong_v1.2.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

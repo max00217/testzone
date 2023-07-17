@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="2-player pong">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/LOVE/2P PingPong/2-player pong.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

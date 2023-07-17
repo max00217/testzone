@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="lovr-docs-0.16.0">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/LOVR/lovr-docs-0.16.0.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
